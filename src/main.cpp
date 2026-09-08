@@ -5,7 +5,7 @@
 #include <Preferences.h>
 
 Preferences prefs;
-char hostname[33] = "module1";
+char hostname[33] = "module2";
 
 // Servers
 WebServer server(80);
@@ -65,6 +65,7 @@ void toggleSingleRelay(int pin)
   }
 }
 
+// Toggle ALL relays (Invert each state)
 void toggleAllRelays()
 {
   for (size_t i = 0; i < relayCount; i++)
@@ -75,40 +76,41 @@ void toggleAllRelays()
   broadcastStates();
 }
 
+// Turn ALL relays OFF
+void turnOffAllRelays()
+{
+  for (size_t i = 0; i < relayCount; i++)
+  {
+    relayStates[i] = false;
+    digitalWrite(relayPins[i], RELAY_INACTIVE);
+  }
+  broadcastStates();
+}
+
 // Open captive portal on demand
 void openConfigPortal()
 {
   Serial.println("\n[Portal] Stopping background services...");
 
-  // 1. Stop active servers so ports 80 and 81 are fully released
   server.stop();
   webSocket.close();
   delay(100);
 
-  // 2. Disconnect from router WITHOUT clearing saved credentials from NVS
   WiFi.disconnect(false, false);
   delay(100);
   WiFi.mode(WIFI_AP);
 
   WiFiManager wm;
-
-  // 3. Enable captive portal detection
   wm.setCaptivePortalEnable(true);
-
-  // 4. Force AP IP configuration
   wm.setAPStaticIPConfig(
       IPAddress(192, 168, 4, 1),
       IPAddress(192, 168, 4, 1),
       IPAddress(255, 255, 255, 0));
 
-  // 5. Add custom hostname parameter
   WiFiManagerParameter custom_hostname("hostname_id", "Custom Hostname (.local)", hostname, 32);
   wm.addParameter(&custom_hostname);
-
-  // 6. Set timeout (180 seconds)
   wm.setConfigPortalTimeout(180);
 
-  // Start the portal
   if (!wm.startConfigPortal("ESP32-Config-AP"))
   {
     Serial.println("[Portal] Timed out or exited without changes.");
@@ -132,6 +134,7 @@ void openConfigPortal()
   ESP.restart();
 }
 
+// WebSocket event dispatcher
 void webSocketEvent(uint8_t num, WStype_t type, uint8_t *payload, size_t length)
 {
   if (type == WStype_CONNECTED)
@@ -147,9 +150,18 @@ void webSocketEvent(uint8_t num, WStype_t type, uint8_t *payload, size_t length)
       int pin = msg.substring(7).toInt();
       toggleSingleRelay(pin);
     }
+    else if (msg == "TOGGLE_ALL")
+    {
+      toggleAllRelays();
+    }
+    else if (msg == "ALL_OFF")
+    {
+      turnOffAllRelays();
+    }
   }
 }
 
+// HTML & Live WebSocket UI
 const char INDEX_HTML[] PROGMEM = R"rawliteral(
 <!DOCTYPE html>
 <html lang="en">
@@ -160,12 +172,21 @@ const char INDEX_HTML[] PROGMEM = R"rawliteral(
   <style>
     * { box-sizing: border-box; font-family: system-ui, -apple-system, sans-serif; }
     body { background: #0f172a; color: #f8fafc; display: flex; flex-direction: column; align-items: center; padding: 24px 16px; margin: 0; }
-    h1 { font-size: 1.5rem; margin-bottom: 8px; }
-    #status { font-size: 0.85rem; color: #94a3b8; margin-bottom: 24px; }
+    h1 { font-size: 1.5rem; margin-bottom: 6px; }
+    #status { font-size: 0.85rem; color: #94a3b8; margin-bottom: 20px; }
+    
+    /* Master Controls */
+    .master-controls { display: flex; gap: 12px; width: 100%; max-width: 400px; margin-bottom: 18px; }
+    .btn-master { flex: 1; padding: 12px; font-size: 0.95rem; font-weight: 700; border: none; border-radius: 8px; cursor: pointer; transition: opacity 0.15s ease; }
+    .btn-master:active { opacity: 0.8; }
+    .btn-all-off { background: #dc2626; color: #ffffff; }
+    .btn-toggle-all { background: #2563eb; color: #ffffff; }
+
+    /* Grid for Individual Relays */
     .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; width: 100%; max-width: 400px; }
     .card { background: #1e293b; border-radius: 12px; padding: 16px; text-align: center; }
     .label { font-size: 0.9rem; color: #94a3b8; margin-bottom: 12px; }
-    button { width: 100%; padding: 14px; font-size: 1rem; font-weight: 700; border: none; border-radius: 8px; cursor: pointer; transition: all 0.15s ease; }
+    .btn-relay { width: 100%; padding: 14px; font-size: 1rem; font-weight: 700; border: none; border-radius: 8px; cursor: pointer; transition: all 0.15s ease; }
     .btn-off { background: #334155; color: #cbd5e1; }
     .btn-on { background: #16a34a; color: #ffffff; box-shadow: 0 0 12px rgba(22, 163, 74, 0.5); }
   </style>
@@ -173,6 +194,14 @@ const char INDEX_HTML[] PROGMEM = R"rawliteral(
 <body>
   <h1>Relay Controller</h1>
   <div id="status">Connecting WebSocket...</div>
+
+  <!-- Master Controls -->
+  <div class="master-controls">
+    <button class="btn-master btn-all-off" onclick="sendAction('ALL_OFF')">Turn All OFF</button>
+    <button class="btn-master btn-toggle-all" onclick="sendAction('TOGGLE_ALL')">Toggle All</button>
+  </div>
+
+  <!-- Individual Relays -->
   <div class="grid" id="relay-grid"></div>
 
   <script>
@@ -185,7 +214,7 @@ const char INDEX_HTML[] PROGMEM = R"rawliteral(
       card.className = 'card';
       card.innerHTML = `
         <div class="label">Relay ${i + 1} (IO${pin})</div>
-        <button id="btn-${pin}" class="btn-off" onclick="sendToggle(${pin})">OFF</button>
+        <button id="btn-${pin}" class="btn-relay btn-off" onclick="sendAction('TOGGLE:' + ${pin})">OFF</button>
       `;
       grid.appendChild(card);
     });
@@ -193,7 +222,7 @@ const char INDEX_HTML[] PROGMEM = R"rawliteral(
     function updateButton(pin, isOn) {
       const btn = document.getElementById(`btn-${pin}`);
       if (!btn) return;
-      btn.className = isOn ? 'btn-on' : 'btn-off';
+      btn.className = 'btn-relay ' + (isOn ? 'btn-on' : 'btn-off');
       btn.innerText = isOn ? 'ON' : 'OFF';
     }
 
@@ -217,9 +246,9 @@ const char INDEX_HTML[] PROGMEM = R"rawliteral(
       };
     }
 
-    function sendToggle(pin) {
+    function sendAction(cmd) {
       if (socket && socket.readyState === WebSocket.OPEN) {
-        socket.send(`TOGGLE:${pin}`);
+        socket.send(cmd);
       }
     }
 
@@ -262,7 +291,7 @@ void setup()
     ESP.restart();
   }
 
-  // Save hostname if modified during initial boot portal
+  // Save hostname if changed during initial boot portal
   String newHostname = custom_hostname.getValue();
   newHostname.trim();
   if (newHostname.length() > 0 && newHostname != savedHostname)
@@ -301,7 +330,7 @@ void loop()
 
   unsigned long currentMillis = millis();
 
-  // --- IO2 Handler (Toggle All Relays) ---
+  // --- IO2 Handler (Physical Master Toggle) ---
   int masterReading = digitalRead(MASTER_BTN_PIN);
   if (masterReading != lastMasterBtnState)
   {
