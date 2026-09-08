@@ -5,7 +5,7 @@
 #include <Preferences.h>
 
 Preferences prefs;
-char hostname[33] = "module2";
+char hostname[33] = "module1";
 
 // Servers
 WebServer server(80);
@@ -78,24 +78,40 @@ void toggleAllRelays()
 // Open captive portal on demand
 void openConfigPortal()
 {
-  Serial.println("\n[Portal] Stopping active servers to free port 80...");
+  Serial.println("\n[Portal] Stopping background services...");
 
-  // 1. Release port 80 and port 81
+  // 1. Stop active servers so ports 80 and 81 are fully released
   server.stop();
   webSocket.close();
   delay(100);
 
-  // 2. Ensure AP mode is active
-  WiFi.mode(WIFI_AP_STA);
+  // 2. Disconnect from router WITHOUT clearing saved credentials from NVS
+  WiFi.disconnect(false, false);
+  delay(100);
+  WiFi.mode(WIFI_AP);
 
   WiFiManager wm;
+
+  // 3. Enable captive portal detection
+  wm.setCaptivePortalEnable(true);
+
+  // 4. Force AP IP configuration
+  wm.setAPStaticIPConfig(
+      IPAddress(192, 168, 4, 1),
+      IPAddress(192, 168, 4, 1),
+      IPAddress(255, 255, 255, 0));
+
+  // 5. Add custom hostname parameter
   WiFiManagerParameter custom_hostname("hostname_id", "Custom Hostname (.local)", hostname, 32);
   wm.addParameter(&custom_hostname);
+
+  // 6. Set timeout (180 seconds)
   wm.setConfigPortalTimeout(180);
 
+  // Start the portal
   if (!wm.startConfigPortal("ESP32-Config-AP"))
   {
-    Serial.println("[Portal] Timed out without saving.");
+    Serial.println("[Portal] Timed out or exited without changes.");
   }
   else
   {
@@ -107,7 +123,7 @@ void openConfigPortal()
       prefs.begin("settings", false);
       prefs.putString("hostname", newHostname);
       prefs.end();
-      Serial.printf("[Portal] New hostname saved: %s\n", newHostname.c_str());
+      Serial.printf("[Portal] Hostname updated to: %s\n", newHostname.c_str());
     }
   }
 
