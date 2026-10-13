@@ -5,8 +5,10 @@
 #include <Preferences.h>
 #include <PubSubClient.h>
 
+#define Module_Name module7
+
 Preferences prefs;
-char hostname[33] = "module1";
+char hostname[33] = "Module_Name";
 char mqtt_server[40] = "homeassistant.local";
 char mqtt_port[6] = "1883";
 char mqtt_user[32] = "esp32_user";
@@ -250,7 +252,7 @@ void openConfigPortal()
   wm.addParameter(&custom_mqtt_pass);
   wm.setConfigPortalTimeout(180);
 
-  if (wm.startConfigPortal("ESP32-Config-AP"))
+  if (wm.startConfigPortal("ESP32-Module_Name-AP"))
   {
     prefs.begin("settings", false);
     prefs.putString("hostname", custom_hostname.getValue());
@@ -395,7 +397,7 @@ void setup()
 
   // Load preferences
   prefs.begin("settings", false);
-  prefs.getString("hostname", "module1").toCharArray(hostname, sizeof(hostname));
+  prefs.getString("hostname", "Module_Name").toCharArray(hostname, sizeof(hostname));
   prefs.getString("mqtt_server", "homeassistant.local").toCharArray(mqtt_server, sizeof(mqtt_server));
   prefs.getString("mqtt_port", "1883").toCharArray(mqtt_port, sizeof(mqtt_port));
   prefs.getString("mqtt_user", "").toCharArray(mqtt_user, sizeof(mqtt_user));
@@ -417,7 +419,7 @@ void setup()
   wm.addParameter(&custom_mqtt_pass);
   wm.setHostname(hostname);
 
-  if (!wm.autoConnect("ESP32-Config-AP"))
+  if (!wm.autoConnect("ESP32-Module_Name-AP"))
   {
     ESP.restart();
   }
