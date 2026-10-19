@@ -5,7 +5,7 @@
 #include <Preferences.h>
 #include <PubSubClient.h>
 
-#define Module_Name module7
+#define Module_Name module1
 
 Preferences prefs;
 char hostname[33] = "Module_Name";
@@ -20,10 +20,10 @@ WebSocketsServer webSocket(81);
 WiFiClient espClient;
 PubSubClient mqttClient(espClient);
 
-// Relay Pin assignments
-const uint8_t relayPins[] = {0, 1, 4, 5};
+// Relay Pin assignments (Updated for 8 Relays)
+const uint8_t relayPins[] = {0, 1, 4, 5, 19, 18, 10, 7};
 const size_t relayCount = sizeof(relayPins) / sizeof(relayPins[0]);
-bool relayStates[] = {false, false, false, false};
+bool relayStates[] = {false, false, false, false, false, false, false, false};
 
 // Active-HIGH relays (HIGH = ON, LOW = OFF)
 #define RELAY_ACTIVE HIGH
@@ -327,7 +327,8 @@ const char INDEX_HTML[] PROGMEM = R"rawliteral(
   <div class="grid" id="relay-grid"></div>
 
   <script>
-    const pins = [0, 1, 4, 5];
+    // Updated JavaScript Array for 8 Relays
+    const pins = [0, 1, 4, 5, 19, 18, 10, 7];
     const grid = document.getElementById('relay-grid');
     const statusDiv = document.getElementById('status');
 
