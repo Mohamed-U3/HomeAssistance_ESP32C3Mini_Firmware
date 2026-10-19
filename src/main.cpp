@@ -5,10 +5,20 @@
 #include <Preferences.h>
 #include <PubSubClient.h>
 
-#define Module_Name module1
+// ==========================================
+// 1. MODULE NAME CONFIGURATION
+// ==========================================
+#define Module_Name module3
+
+// Preprocessor Stringification Macros
+#define STR_HELPER(x) #x
+#define STR(x) STR_HELPER(x)
+
+#define DEFAULT_HOSTNAME STR(Module_Name)
+#define AP_SSID "ESP32-" STR(Module_Name) "-AP"
 
 Preferences prefs;
-char hostname[33] = "Module_Name";
+char hostname[33] = DEFAULT_HOSTNAME;
 char mqtt_server[40] = "homeassistant.local";
 char mqtt_port[6] = "1883";
 char mqtt_user[32] = "esp32_user";
@@ -20,7 +30,12 @@ WebSocketsServer webSocket(81);
 WiFiClient espClient;
 PubSubClient mqttClient(espClient);
 
-// Relay Pin assignments (Updated for 8 Relays)
+// Non-blocking MQTT background probe variables
+volatile bool mqttBrokerReachable = false;
+IPAddress mqttResolvedIP;
+bool shouldSaveConfig = false;
+
+// Relay Pin assignments (8 Relays)
 const uint8_t relayPins[] = {0, 1, 4, 5, 19, 18, 10, 7};
 const size_t relayCount = sizeof(relayPins) / sizeof(relayPins[0]);
 bool relayStates[] = {false, false, false, false, false, false, false, false};
@@ -123,26 +138,27 @@ void sendHADiscovery()
     String payload = "{"
                      "\"name\":\"Relay " +
                      String(i + 1) + "\","
-                                     "\"unique_id\":\"" +
+                     "\"unique_id\":\"" +
                      String(hostname) + "_relay_" + String(i) + "\","
-                                                                "\"cmd_t\":\"" +
+                     "\"cmd_t\":\"" +
                      cmdTopic + "\","
-                                "\"stat_t\":\"" +
+                     "\"stat_t\":\"" +
                      stateTopic + "\","
-                                  "\"pl_on\":\"ON\","
-                                  "\"pl_off\":\"OFF\","
-                                  "\"dev\":{"
-                                  "\"ids\":[\"" +
+                     "\"pl_on\":\"ON\","
+                     "\"pl_off\":\"OFF\","
+                     "\"dev\":{"
+                     "\"ids\":[\"" +
                      String(hostname) + "\"],"
-                                        "\"name\":\"" +
+                     "\"name\":\"" +
                      String(hostname) + " Controller\","
-                                        "\"mf\":\"DIY\","
-                                        "\"mdl\":\"ESP32-C3 Relay Board\""
-                                        "}"
-                                        "}";
+                     "\"mf\":\"DIY\","
+                     "\"mdl\":\"ESP32-C3 Relay Board\""
+                     "}"
+                     "}";
 
     mqttClient.publish(discoveryTopic.c_str(), payload.c_str(), true);
     publishMqttState(i);
+    mqttClient.loop(); // Keep buffer clear when sending 8 discovery payloads
   }
 }
 
@@ -173,52 +189,81 @@ void mqttCallback(char *topic, byte *payload, unsigned int length)
   }
 }
 
-// Non-blocking MQTT reconnection loop
+// Background FreeRTOS Task: Checks if MQTT Broker is online without blocking WebServer/WebSockets
+void mqttProbeTask(void *pvParameters)
+{
+  for (;;)
+  {
+    if (WiFi.status() == WL_CONNECTED && !mqttClient.connected() && !mqttBrokerReachable && strlen(mqtt_server) > 0)
+    {
+      IPAddress resolved;
+      int port = atoi(mqtt_port);
+      if (port <= 0)
+        port = 1883;
+
+      // Resolve mDNS/DNS and test TCP port in background (yields CPU to WebServer)
+      if (WiFi.hostByName(mqtt_server, resolved))
+      {
+        WiFiClient probeClient;
+        if (probeClient.connect(resolved, port, 1500))
+        {
+          probeClient.stop();
+          mqttResolvedIP = resolved;
+          mqttBrokerReachable = true;
+        }
+      }
+    }
+    vTaskDelay(pdMS_TO_TICKS(5000)); // Probe every 5 seconds when disconnected
+  }
+}
+
+// Fast, non-blocking MQTT connection (only runs after mqttProbeTask confirms broker is live)
 void reconnectMQTT()
 {
-  // Inside reconnectMQTT(), right before mqttClient.connect(...)
-  Serial.printf("Connecting as User: '%s' | Pass: '%s'\n", mqtt_user, mqtt_pass);
-  if (strlen(mqtt_server) == 0)
+  if (!mqttBrokerReachable || mqttClient.connected())
     return;
 
-  if (!mqttClient.connected())
+  unsigned long now = millis();
+  if (now - lastMqttReconnectAttempt > 5000)
   {
-    unsigned long now = millis();
-    if (now - lastMqttReconnectAttempt > 5000)
+    lastMqttReconnectAttempt = now;
+    mqttBrokerReachable = false; // Reset flag until next probe if this attempt fails
+
+    int port = atoi(mqtt_port);
+    if (port <= 0)
+      port = 1883;
+
+    mqttClient.setServer(mqttResolvedIP, port);
+
+    Serial.printf("Connecting to MQTT (%s / %s) as User: '%s'...",
+                  mqtt_server, mqttResolvedIP.toString().c_str(), mqtt_user);
+
+    String clientId = String(hostname) + "-" + String(random(0xffff), HEX);
+    bool connected = false;
+
+    if (strlen(mqtt_user) > 0)
     {
-      lastMqttReconnectAttempt = now;
-      Serial.print("Connecting to MQTT Broker (");
-      Serial.print(mqtt_server);
-      Serial.print(")...");
+      connected = mqttClient.connect(clientId.c_str(), mqtt_user, mqtt_pass);
+    }
+    else
+    {
+      connected = mqttClient.connect(clientId.c_str());
+    }
 
-      String clientId = String(hostname) + "-" + String(random(0xffff), HEX);
-      bool connected = false;
-
-      if (strlen(mqtt_user) > 0)
+    if (connected)
+    {
+      Serial.println(" Connected!");
+      for (size_t i = 0; i < relayCount; i++)
       {
-        connected = mqttClient.connect(clientId.c_str(), mqtt_user, mqtt_pass);
+        String cmdTopic = String("homeassistant/switch/") + hostname + "/relay" + String(i) + "/set";
+        mqttClient.subscribe(cmdTopic.c_str());
       }
-      else
-      {
-        connected = mqttClient.connect(clientId.c_str());
-      }
-
-      if (connected)
-      {
-        Serial.println(" Connected!");
-        // Subscribe to commands for all relays
-        for (size_t i = 0; i < relayCount; i++)
-        {
-          String cmdTopic = String("homeassistant/switch/") + hostname + "/relay" + String(i) + "/set";
-          mqttClient.subscribe(cmdTopic.c_str());
-        }
-        sendHADiscovery();
-      }
-      else
-      {
-        Serial.print(" Failed, rc=");
-        Serial.println(mqttClient.state());
-      }
+      sendHADiscovery();
+    }
+    else
+    {
+      Serial.print(" Failed, rc=");
+      Serial.println(mqttClient.state());
     }
   }
 }
@@ -252,7 +297,7 @@ void openConfigPortal()
   wm.addParameter(&custom_mqtt_pass);
   wm.setConfigPortalTimeout(180);
 
-  if (wm.startConfigPortal("ESP32-Module_Name-AP"))
+  if (wm.startConfigPortal(AP_SSID))
   {
     prefs.begin("settings", false);
     prefs.putString("hostname", custom_hostname.getValue());
@@ -327,7 +372,6 @@ const char INDEX_HTML[] PROGMEM = R"rawliteral(
   <div class="grid" id="relay-grid"></div>
 
   <script>
-    // Updated JavaScript Array for 8 Relays
     const pins = [0, 1, 4, 5, 19, 18, 10, 7];
     const grid = document.getElementById('relay-grid');
     const statusDiv = document.getElementById('status');
@@ -398,15 +442,23 @@ void setup()
 
   // Load preferences
   prefs.begin("settings", false);
-  prefs.getString("hostname", "Module_Name").toCharArray(hostname, sizeof(hostname));
+  prefs.getString("hostname", DEFAULT_HOSTNAME).toCharArray(hostname, sizeof(hostname));
+  // Fix if old literal "Module_Name" was saved in NVS flash previously
+  if (strcmp(hostname, "Module_Name") == 0 || strlen(hostname) == 0)
+  {
+    strncpy(hostname, DEFAULT_HOSTNAME, sizeof(hostname));
+    prefs.putString("hostname", hostname);
+  }
   prefs.getString("mqtt_server", "homeassistant.local").toCharArray(mqtt_server, sizeof(mqtt_server));
   prefs.getString("mqtt_port", "1883").toCharArray(mqtt_port, sizeof(mqtt_port));
-  prefs.getString("mqtt_user", "").toCharArray(mqtt_user, sizeof(mqtt_user));
-  prefs.getString("mqtt_pass", "").toCharArray(mqtt_pass, sizeof(mqtt_pass));
+  prefs.getString("mqtt_user", "esp32_user").toCharArray(mqtt_user, sizeof(mqtt_user));
+  prefs.getString("mqtt_pass", "mqttpass123").toCharArray(mqtt_pass, sizeof(mqtt_pass));
   prefs.end();
 
   // WiFiManager
   WiFiManager wm;
+  wm.setSaveParamsCallback([]() { shouldSaveConfig = true; });
+
   WiFiManagerParameter custom_hostname("hostname_id", "Custom Hostname (.local)", hostname, 32);
   WiFiManagerParameter custom_mqtt_server("mqtt_server", "MQTT Broker (IP or Hostname)", mqtt_server, 40);
   WiFiManagerParameter custom_mqtt_port("mqtt_port", "MQTT Port", mqtt_port, 6);
@@ -420,9 +472,27 @@ void setup()
   wm.addParameter(&custom_mqtt_pass);
   wm.setHostname(hostname);
 
-  if (!wm.autoConnect("ESP32-Module_Name-AP"))
+  if (!wm.autoConnect(AP_SSID))
   {
     ESP.restart();
+  }
+
+  // Save parameters if user configured them during first-time autoConnect portal
+  if (shouldSaveConfig)
+  {
+    strncpy(hostname, custom_hostname.getValue(), sizeof(hostname));
+    strncpy(mqtt_server, custom_mqtt_server.getValue(), sizeof(mqtt_server));
+    strncpy(mqtt_port, custom_mqtt_port.getValue(), sizeof(mqtt_port));
+    strncpy(mqtt_user, custom_mqtt_user.getValue(), sizeof(mqtt_user));
+    strncpy(mqtt_pass, custom_mqtt_pass.getValue(), sizeof(mqtt_pass));
+
+    prefs.begin("settings", false);
+    prefs.putString("hostname", hostname);
+    prefs.putString("mqtt_server", mqtt_server);
+    prefs.putString("mqtt_port", mqtt_port);
+    prefs.putString("mqtt_user", mqtt_user);
+    prefs.putString("mqtt_pass", mqtt_pass);
+    prefs.end();
   }
 
   // mDNS
@@ -433,11 +503,13 @@ void setup()
   }
 
   // Configure MQTT Client with 512-byte buffer for HA Discovery JSON
-  mqttClient.setServer(mqtt_server, atoi(mqtt_port));
+  espClient.setTimeout(1); // 1-second socket timeout safety cap
   mqttClient.setCallback(mqttCallback);
   mqttClient.setBufferSize(512);
 
   Serial.println("\n--- WiFi Connected ---");
+  Serial.print("AP Name:    ");
+  Serial.println(AP_SSID);
   Serial.print("IP Address: ");
   Serial.println(WiFi.localIP());
   Serial.printf("Host URL:   http://%s.local\n", hostname);
@@ -449,6 +521,16 @@ void setup()
 
   webSocket.begin();
   webSocket.onEvent(webSocketEvent);
+
+  // Start background task to probe MQTT broker without ever blocking the Web UI
+  xTaskCreate(
+      mqttProbeTask,   // Task function
+      "MQTTProbeTask", // Name
+      4096,            // Stack size
+      NULL,            // Parameters
+      1,               // Low priority so WebServer/WebSockets always come first
+      NULL             // Task handle
+  );
 }
 
 void loop()
@@ -456,7 +538,7 @@ void loop()
   server.handleClient();
   webSocket.loop();
 
-  // Handle MQTT connection in background
+  // Handle MQTT connection in background only when broker is verified reachable
   if (WiFi.status() == WL_CONNECTED)
   {
     if (!mqttClient.connected())
