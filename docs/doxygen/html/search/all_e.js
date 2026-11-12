@@ -1,13 +1,9 @@
 var searchData=
 [
-  ['handlebuttons_0',['handleButtons',['../group__relays.html#ga1583a5cd071b0df65d66ca83d0cd065c',1,'handleButtons(PortalTriggerCallback onPortalRequested):&#160;relays.cpp'],['../group__relays.html#ga1583a5cd071b0df65d66ca83d0cd065c',1,'handleButtons(PortalTriggerCallback onPortalRequested):&#160;relays.cpp']]],
-  ['handlemqtt_1',['handleMqtt',['../group__mqtt.html#ga6486046a18c78302adfce7b6b4dc09d4',1,'handleMqtt():&#160;mqtt_ha.cpp'],['../group__mqtt.html#ga6486046a18c78302adfce7b6b4dc09d4',1,'handleMqtt():&#160;mqtt_ha.cpp']]],
-  ['handlewebui_2',['handleWebUi',['../group__webui.html#ga6197e94218f5f0febc0a35e777fb3475',1,'handleWebUi():&#160;web_ui.cpp'],['../group__webui.html#ga6197e94218f5f0febc0a35e777fb3475',1,'handleWebUi():&#160;web_ui.cpp']]],
-  ['hardware_20design_20pinout_3',['Hardware Design &amp;amp; Pinout',['../index.html#autotoc_md4',1,'']]],
-  ['hardware_20software_20block_20diagram_4',['1. High-Level Hardware &amp;amp; Software Block Diagram',['../md_docs_2_s_y_s_t_e_m___a_r_c_h_i_t_e_c_t_u_r_e.html#autotoc_md23',1,'']]],
-  ['hassavedwifi_5',['hasSavedWifi',['../group__config.html#gaa8998deebebade674248ea8b1b02aabf',1,'hasSavedWifi():&#160;config.cpp'],['../group__config.html#gaa8998deebebade674248ea8b1b02aabf',1,'hasSavedWifi():&#160;config.cpp']]],
-  ['high_20level_20hardware_20software_20block_20diagram_6',['1. High-Level Hardware &amp;amp; Software Block Diagram',['../md_docs_2_s_y_s_t_e_m___a_r_c_h_i_t_e_c_t_u_r_e.html#autotoc_md23',1,'']]],
-  ['home_20assistant_20mqtt_20integration_7',['Home Assistant MQTT Integration',['../group__mqtt.html',1,'']]],
-  ['home_20assistant_20web_20ui_8',['ESP32-C3 8-Channel Smart Relay Controller (Home Assistant + Web UI)',['../index.html',1,'']]],
-  ['hostname_9',['hostname',['../struct_app_config.html#a3493f05f167880bb673f39416dd29cae',1,'AppConfig']]]
+  ['electrical_20characteristics_0',['4.1 Electrical Characteristics',['../md_docs_2_p_r_o_d_u_c_t___c_a_t_a_l_o_g.html#autotoc_md47',1,'']]],
+  ['ensurewificonnected_1',['ensureWifiConnected',['../group__config.html#ga98066adaeb8cb096485d48e91c27e50e',1,'ensureWifiConnected(WifiTickCallback onTick):&#160;config.cpp'],['../group__config.html#ga98066adaeb8cb096485d48e91c27e50e',1,'ensureWifiConnected(WifiTickCallback onTick):&#160;config.cpp']]],
+  ['environmental_20specifications_2',['4.3 Mechanical &amp;amp; Environmental Specifications',['../md_docs_2_p_r_o_d_u_c_t___c_a_t_a_l_o_g.html#autotoc_md49',1,'']]],
+  ['esp32_20c3_208_20channel_20smart_20relay_20controller_3',['ESP32-C3 8-Channel Smart Relay Controller',['../md_docs_2_p_r_o_d_u_c_t___c_a_t_a_l_o_g.html#autotoc_md36',1,'']]],
+  ['esp32_20c3_208_20channel_20smart_20relay_20controller_20home_20assistant_20web_20ui_4',['ESP32-C3 8-Channel Smart Relay Controller (Home Assistant + Web UI)',['../index.html',1,'']]],
+  ['espclient_5',['espClient',['../mqtt__ha_8cpp.html#abd77e757e4b3bb6f1e4b42b21ea9e040',1,'mqtt_ha.cpp']]]
 ];

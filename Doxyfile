@@ -8,7 +8,7 @@ ALLOW_UNICODE_NAMES    = YES
 OUTPUT_LANGUAGE        = English
 
 # Input & Markdown integration
-INPUT                  = README.md docs/SYSTEM_ARCHITECTURE.md src
+INPUT                  = README.md docs/SYSTEM_ARCHITECTURE.md docs/PRODUCT_CATALOG.md src
 FILE_PATTERNS          = *.h *.hpp *.cpp *.c *.md
 RECURSIVE              = NO
 USE_MDFILE_AS_MAINPAGE = README.md

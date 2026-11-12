@@ -242,7 +242,7 @@ flowchart TD
     Run --&gt;|&quot;Wi-Fi Lost &gt; 2 min\nor Web/IO8 Trigger&quot;| TriggerPortal[&quot;Stop WebUI + MQTT Offline\nOpen Config Portal (180 s)&quot;]
     TriggerPortal --&gt; Restart([ESP.restart]) --&gt; Boot</pre>
 </div>
-<p>For full architecture, sequence, and FreeRTOS task diagrams suitable for presentations, see <a class="el" href="md_docs_2_s_y_s_t_e_m___a_r_c_h_i_t_e_c_t_u_r_e.html" title="System Architecture &amp; Presentation Diagrams">docs/SYSTEM_ARCHITECTURE.md</a>.</p>
+<p>For full architecture, sequence, and FreeRTOS task diagrams suitable for presentations, see <a class="el" href="md_docs_2_s_y_s_t_e_m___a_r_c_h_i_t_e_c_t_u_r_e.html" title="System Architecture &amp; Presentation Diagrams">docs/SYSTEM_ARCHITECTURE.md</a>. For the complete hardware product catalog and technical datasheet with 3D PCB renders and electrical ratings, see <a class="el" href="md_docs_2_p_r_o_d_u_c_t___c_a_t_a_l_o_g.html" title="Product Catalog &amp; Technical Datasheet">docs/PRODUCT_CATALOG.md</a>.</p>
 <hr  />
 <h1 class="doxsection"><a class="anchor" id="autotoc_md10"></a>
 Project Structure</h1>
@@ -250,7 +250,9 @@ Project Structure</h1>
 <div class="line">├── Doxyfile                    # Doxygen + Graphviz configuration</div>
 <div class="line">├── README.md                   # Project overview &amp; quickstart</div>
 <div class="line">├── docs/</div>
+<div class="line">│   ├── PRODUCT_CATALOG.md      # Hardware product catalog &amp; technical datasheet</div>
 <div class="line">│   ├── SYSTEM_ARCHITECTURE.md  # Detailed presentation graphs (Mermaid)</div>
+<div class="line">│   ├── images/                 # Hardware 3D renders &amp; orthographic PCB photos</div>
 <div class="line">│   └── doxygen/html/           # Generated Doxygen HTML + interactive SVG graphs</div>
 <div class="line">└── src/</div>
 <div class="line">    ├── main.cpp                # Boot orchestration, ArduinoOTA, loop &amp; Wi-Fi monitor</div>

@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['readme_2emd_0',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]],
-  ['relays_2ecpp_1',['relays.cpp',['../relays_8cpp.html',1,'']]],
-  ['relays_2eh_2',['relays.h',['../relays_8h.html',1,'']]]
+  ['product_5fcatalog_2emd_0',['PRODUCT_CATALOG.md',['../_p_r_o_d_u_c_t___c_a_t_a_l_o_g_8md.html',1,'']]]
 ];

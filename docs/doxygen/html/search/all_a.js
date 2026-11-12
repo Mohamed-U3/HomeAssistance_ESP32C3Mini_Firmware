@@ -1,11 +1,13 @@
 var searchData=
 [
-  ['debounce_5fdelay_5fms_0',['DEBOUNCE_DELAY_MS',['../relays_8cpp.html#ade7aa176205cfbb0443007595093c05c',1,'relays.cpp']]],
-  ['default_5fhostname_1',['DEFAULT_HOSTNAME',['../group__config.html#gacbd0b3def6b58577376d5c5edbc1f8d1',1,'config.h']]],
-  ['dependency_20graph_2',['2. Module Include &amp;amp; Dependency Graph',['../md_docs_2_s_y_s_t_e_m___a_r_c_h_i_t_e_c_t_u_r_e.html#autotoc_md25',1,'']]],
-  ['design_20pinout_3',['Hardware Design &amp;amp; Pinout',['../index.html#autotoc_md4',1,'']]],
-  ['diagram_4',['1. High-Level Hardware &amp;amp; Software Block Diagram',['../md_docs_2_s_y_s_t_e_m___a_r_c_h_i_t_e_c_t_u_r_e.html#autotoc_md23',1,'']]],
-  ['diagrams_5',['System Architecture &amp;amp; Presentation Diagrams',['../md_docs_2_s_y_s_t_e_m___a_r_c_h_i_t_e_c_t_u_r_e.html',1,'']]],
-  ['documentation_20graphs_6',['Generating Doxygen Documentation &amp;amp; Graphs',['../index.html#autotoc_md20',1,'']]],
-  ['doxygen_20documentation_20graphs_7',['Generating Doxygen Documentation &amp;amp; Graphs',['../index.html#autotoc_md20',1,'']]]
+  ['active_20semiconductor_20devices_0',['5.2 Microcontroller &amp;amp; Active Semiconductor Devices',['../md_docs_2_p_r_o_d_u_c_t___c_a_t_a_l_o_g.html#autotoc_md53',1,'']]],
+  ['appconfig_1',['AppConfig',['../struct_app_config.html',1,'']]],
+  ['appconfig_2',['appConfig',['../group__config.html#ga469af310bb72a10118a9fd721676f560',1,'appConfig:&#160;config.cpp'],['../group__config.html#ga469af310bb72a10118a9fd721676f560',1,'appConfig:&#160;config.cpp']]],
+  ['application_20scenarios_3',['7. Typical Application Scenarios',['../md_docs_2_p_r_o_d_u_c_t___c_a_t_a_l_o_g.html#autotoc_md60',1,'']]],
+  ['applyrelaypin_4',['applyRelayPin',['../relays_8cpp.html#a9cfb1378655154eed8cc8a6ce38d3047',1,'relays.cpp']]],
+  ['architecture_5',['Architecture',['../md_docs_2_p_r_o_d_u_c_t___c_a_t_a_l_o_g.html#autotoc_md55',1,'6. Software &amp;amp; Integration Architecture'],['../index.html#autotoc_md6',1,'System Architecture']]],
+  ['architecture_20presentation_20diagrams_6',['System Architecture &amp;amp; Presentation Diagrams',['../md_docs_2_s_y_s_t_e_m___a_r_c_h_i_t_e_c_t_u_r_e.html',1,'']]],
+  ['assistant_20integration_20zero_20yaml_7',['6.1 Home Assistant Integration (Zero YAML)',['../md_docs_2_p_r_o_d_u_c_t___c_a_t_a_l_o_g.html#autotoc_md56',1,'']]],
+  ['assistant_20mqtt_20integration_8',['Home Assistant MQTT Integration',['../group__mqtt.html',1,'']]],
+  ['assistant_20web_20ui_9',['ESP32-C3 8-Channel Smart Relay Controller (Home Assistant + Web UI)',['../index.html',1,'']]]
 ];

@@ -103,7 +103,7 @@ flowchart TD
     TriggerPortal --> Restart([ESP.restart]) --> Boot
 ```
 
-For full architecture, sequence, and FreeRTOS task diagrams suitable for presentations, see [docs/SYSTEM_ARCHITECTURE.md](docs/SYSTEM_ARCHITECTURE.md).
+For full architecture, sequence, and FreeRTOS task diagrams suitable for presentations, see [docs/SYSTEM_ARCHITECTURE.md](docs/SYSTEM_ARCHITECTURE.md). For the complete hardware product catalog and technical datasheet with 3D PCB renders and electrical ratings, see [docs/PRODUCT_CATALOG.md](docs/PRODUCT_CATALOG.md).
 
 ---
 
@@ -114,7 +114,9 @@ For full architecture, sequence, and FreeRTOS task diagrams suitable for present
 ├── Doxyfile                    # Doxygen + Graphviz configuration
 ├── README.md                   # Project overview & quickstart
 ├── docs/
+│   ├── PRODUCT_CATALOG.md      # Hardware product catalog & technical datasheet
 │   ├── SYSTEM_ARCHITECTURE.md  # Detailed presentation graphs (Mermaid)
+│   ├── images/                 # Hardware 3D renders & orthographic PCB photos
 │   └── doxygen/html/           # Generated Doxygen HTML + interactive SVG graphs
 └── src/
     ├── main.cpp                # Boot orchestration, ArduinoOTA, loop & Wi-Fi monitor
