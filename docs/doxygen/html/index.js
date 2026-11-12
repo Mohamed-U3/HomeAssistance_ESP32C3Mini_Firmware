@@ -1,7 +1,7 @@
 var index =
 [
     [ "Features", "index.html#autotoc_md2", null ],
-    [ "Hardware Pinout", "index.html#autotoc_md4", null ],
+    [ "Hardware Design &amp; Pinout", "index.html#autotoc_md4", null ],
     [ "System Architecture", "index.html#autotoc_md6", null ],
     [ "Wi-Fi Failover &amp; Config Portal Flow", "index.html#autotoc_md8", null ],
     [ "Project Structure", "index.html#autotoc_md10", null ],

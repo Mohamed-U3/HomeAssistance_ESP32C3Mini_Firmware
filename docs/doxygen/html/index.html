@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('index.html',''
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="md__r_e_a_d_m_e"></a></p>
-<p>Firmware for an <b>ESP32-C3</b> 8-channel relay board featuring <b>Home Assistant MQTT Auto-Discovery</b>, a <b>real-time WebSocket Web UI</b>, <b>NVS persistence</b>, <b>automatic Wi-Fi failover</b>, and <b>OTA firmware updates</b>.</p>
+<p>Firmware for an <b>ESP32-C3-MINI</b> 8-channel relay board featuring <b>Home Assistant MQTT Auto-Discovery</b>, a <b>real-time WebSocket Web UI</b>, <b>NVS persistence</b>, <b>automatic Wi-Fi failover</b>, and <b>OTA firmware updates</b>.</p>
 <hr  />
 <h1 class="doxsection"><a class="anchor" id="autotoc_md2"></a>
 Features</h1>
@@ -161,7 +161,13 @@ Features</h1>
 </ul>
 <hr  />
 <h1 class="doxsection"><a class="anchor" id="autotoc_md4"></a>
-Hardware Pinout</h1>
+Hardware Design &amp; Pinout</h1>
+<p>The PCB, schematic, and design files for this controller live in a separate repository:</p><ul>
+<li><a href="https://github.com/Mohamed-U3/Smart_home_Board">Smart_home_Board</a> (ESP32-C3-MINI, 8 relay outputs, 2 user buttons, CH340 USB-to-UART on <span class="tt">UART0</span> at <span class="tt">115200</span> baud, plus <span class="tt">Flash</span> and <span class="tt">Reset</span> buttons).</li>
+</ul>
+<blockquote class="doxtable">
+<p>Because programming uses the onboard CH340 USB-to-UART bridge, <span class="tt">GPIO18</span> and <span class="tt">GPIO19</span> are free to drive Relays 6 and 5. </p>
+</blockquote>
 <table class="markdownTable">
 <tr class="markdownTableHead">
 <th class="markdownTableHeadNone">Function  </th><th class="markdownTableHeadNone">GPIO  </th><th class="markdownTableHeadNone">Mode / Polarity  </th><th class="markdownTableHeadNone">Notes  </th></tr>
@@ -193,17 +199,17 @@ System Architecture</h1>
 <pre class="mermaid">
 flowchart LR
     subgraph Inputs[&quot;Control Inputs&quot;]
-        BTN[&quot;Physical Buttons&lt;br/&gt;IO2 (Short) / IO8 (3s Hold)&quot;]
-        WEB[&quot;Browser Web UI&lt;br/&gt;HTTP :80 &amp; WS :81&quot;]
-        HA[&quot;Home Assistant&lt;br/&gt;MQTT Broker&quot;]
+        BTN[&quot;Physical Buttons\nIO2 (Short) / IO8 (3s Hold)&quot;]
+        WEB[&quot;Browser Web UI\nHTTP :80 &amp; WS :81&quot;]
+        HA[&quot;Home Assistant\nMQTT Broker&quot;]
     end
 
     subgraph Core[&quot;ESP32-C3 Firmware&quot;]
-        RELAYS[&quot;relays.cpp&lt;br/&gt;setRelay() / handleButtons()&quot;]
-        CFG[&quot;config.cpp&lt;br/&gt;NVS Preferences &amp; WiFiManager&quot;]
-        MQTT[&quot;mqtt_ha.cpp&lt;br/&gt;PubSubClient + FreeRTOS Probe&quot;]
-        UI[&quot;web_ui.cpp&lt;br/&gt;WebServer + WebSockets + /update OTA&quot;]
-        OTA[&quot;ArduinoOTA&lt;br/&gt;mDNS :3232&quot;]
+        RELAYS[&quot;relays.cpp\nsetRelay() / handleButtons()&quot;]
+        CFG[&quot;config.cpp\nNVS Preferences &amp; WiFiManager&quot;]
+        MQTT[&quot;mqtt_ha.cpp\nPubSubClient + FreeRTOS Probe&quot;]
+        UI[&quot;web_ui.cpp\nWebServer + WebSockets + /update OTA&quot;]
+        OTA[&quot;ArduinoOTA\nmDNS :3232&quot;]
     end
 
     BTN --&gt; RELAYS
@@ -223,17 +229,17 @@ Wi-Fi Failover &amp; Config Portal Flow</h1>
 <div class="mermaidgraph">
 <pre class="mermaid">
 flowchart TD
-    Boot([Power On / Reset]) --&gt; CheckSaved{&quot;Saved SSID&lt;br/&gt;in NVS?&quot;}
-    CheckSaved -- No --&gt; Portal[&quot;Open AP: ESP32-&lt;hostname&gt;-AP&lt;br/&gt;192.168.4.1 (180 s timeout)&lt;br/&gt;IO2 button remains active&quot;]
-    CheckSaved -- Yes --&gt; Search[&quot;Search Saved SSID (120 s)&lt;br/&gt;Retry every 10 s&lt;br/&gt;IO2 &amp; IO8 (3s hold) active&quot;]
+    Boot([Power On / Reset]) --&gt; CheckSaved{&quot;Saved SSID\nin NVS?&quot;}
+    CheckSaved -- No --&gt; Portal[&quot;Open AP: ESP32-hostname-AP\n192.168.4.1 (180 s timeout)\nIO2 button remains active&quot;]
+    CheckSaved -- Yes --&gt; Search[&quot;Search Saved SSID (120 s)\nRetry every 10 s\nIO2 &amp; IO8 (3s hold) active&quot;]
 
-    Search -- Connected --&gt; Run[&quot;Normal Operation&lt;br/&gt;HTTP :80, WS :81, MQTT, mDNS, OTA&quot;]
+    Search -- Connected --&gt; Run[&quot;Normal Operation\nHTTP :80, WS :81, MQTT, mDNS, OTA&quot;]
     Search -- &quot;Timeout (2 min) or IO8 3s&quot; --&gt; Portal
 
     Portal -- &quot;New Wi-Fi Saved&quot; --&gt; Run
     Portal -- &quot;Timeout (3 min, no new SSID)&quot; --&gt; CheckSaved
 
-    Run --&gt;|&quot;Wi-Fi Lost &gt; 2 min&lt;br/&gt;or Web/IO8 Trigger&quot;| TriggerPortal[&quot;Stop WebUI + MQTT Offline&lt;br/&gt;Open Config Portal (180 s)&quot;]
+    Run --&gt;|&quot;Wi-Fi Lost &gt; 2 min\nor Web/IO8 Trigger&quot;| TriggerPortal[&quot;Stop WebUI + MQTT Offline\nOpen Config Portal (180 s)&quot;]
     TriggerPortal --&gt; Restart([ESP.restart]) --&gt; Boot</pre>
 </div>
 <p>For full architecture, sequence, and FreeRTOS task diagrams suitable for presentations, see <a class="el" href="md_docs_2_s_y_s_t_e_m___a_r_c_h_i_t_e_c_t_u_r_e.html" title="System Architecture &amp; Presentation Diagrams">docs/SYSTEM_ARCHITECTURE.md</a>.</p>
@@ -244,7 +250,8 @@ Project Structure</h1>
 <div class="line">├── Doxyfile                    # Doxygen + Graphviz configuration</div>
 <div class="line">├── README.md                   # Project overview &amp; quickstart</div>
 <div class="line">├── docs/</div>
-<div class="line">│   └── SYSTEM_ARCHITECTURE.md  # Detailed presentation graphs (Mermaid)</div>
+<div class="line">│   ├── SYSTEM_ARCHITECTURE.md  # Detailed presentation graphs (Mermaid)</div>
+<div class="line">│   └── doxygen/html/           # Generated Doxygen HTML + interactive SVG graphs</div>
 <div class="line">└── src/</div>
 <div class="line">    ├── main.cpp                # Boot orchestration, ArduinoOTA, loop &amp; Wi-Fi monitor</div>
 <div class="line">    ├── config.h / config.cpp   # NVS settings, sanitization, Wi-Fi search &amp; portal</div>

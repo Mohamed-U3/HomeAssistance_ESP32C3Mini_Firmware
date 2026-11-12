@@ -1,6 +1,6 @@
 # ESP32-C3 8-Channel Smart Relay Controller (Home Assistant + Web UI)
 
-Firmware for an **ESP32-C3** 8-channel relay board featuring **Home Assistant MQTT Auto-Discovery**, a **real-time WebSocket Web UI**, **NVS persistence**, **automatic Wi-Fi failover**, and **OTA firmware updates**.
+Firmware for an **ESP32-C3-MINI** 8-channel relay board featuring **Home Assistant MQTT Auto-Discovery**, a **real-time WebSocket Web UI**, **NVS persistence**, **automatic Wi-Fi failover**, and **OTA firmware updates**.
 
 ---
 
@@ -31,7 +31,12 @@ Firmware for an **ESP32-C3** 8-channel relay board featuring **Home Assistant MQ
 
 ---
 
-## Hardware Pinout
+## Hardware Design & Pinout
+
+The PCB, schematic, and design files for this controller live in a separate repository:
+- [Smart_home_Board](https://github.com/Mohamed-U3/Smart_home_Board) (ESP32-C3-MINI, 8 relay outputs, 2 user buttons, CH340 USB-to-UART on `UART0` at `115200` baud, plus `Flash` and `Reset` buttons).
+
+> Because programming uses the onboard CH340 USB-to-UART bridge, `GPIO18` and `GPIO19` are free to drive Relays 6 and 5.
 
 | Function | GPIO | Mode / Polarity | Notes |
 | --- | --- | --- | --- |
@@ -53,17 +58,17 @@ Firmware for an **ESP32-C3** 8-channel relay board featuring **Home Assistant MQ
 ```mermaid
 flowchart LR
     subgraph Inputs["Control Inputs"]
-        BTN["Physical Buttons<br/>IO2 (Short) / IO8 (3s Hold)"]
-        WEB["Browser Web UI<br/>HTTP :80 &amp; WS :81"]
-        HA["Home Assistant<br/>MQTT Broker"]
+        BTN["Physical Buttons\nIO2 (Short) / IO8 (3s Hold)"]
+        WEB["Browser Web UI\nHTTP :80 & WS :81"]
+        HA["Home Assistant\nMQTT Broker"]
     end
 
     subgraph Core["ESP32-C3 Firmware"]
-        RELAYS["relays.cpp<br/>setRelay() / handleButtons()"]
-        CFG["config.cpp<br/>NVS Preferences &amp; WiFiManager"]
-        MQTT["mqtt_ha.cpp<br/>PubSubClient + FreeRTOS Probe"]
-        UI["web_ui.cpp<br/>WebServer + WebSockets + /update OTA"]
-        OTA["ArduinoOTA<br/>mDNS :3232"]
+        RELAYS["relays.cpp\nsetRelay() / handleButtons()"]
+        CFG["config.cpp\nNVS Preferences & WiFiManager"]
+        MQTT["mqtt_ha.cpp\nPubSubClient + FreeRTOS Probe"]
+        UI["web_ui.cpp\nWebServer + WebSockets + /update OTA"]
+        OTA["ArduinoOTA\nmDNS :3232"]
     end
 
     BTN --> RELAYS
@@ -84,17 +89,17 @@ flowchart LR
 
 ```mermaid
 flowchart TD
-    Boot([Power On / Reset]) --> CheckSaved{"Saved SSID<br/>in NVS?"}
-    CheckSaved -- No --> Portal["Open AP: ESP32-&lt;hostname&gt;-AP<br/>192.168.4.1 (180 s timeout)<br/>IO2 button remains active"]
-    CheckSaved -- Yes --> Search["Search Saved SSID (120 s)<br/>Retry every 10 s<br/>IO2 &amp; IO8 (3s hold) active"]
+    Boot([Power On / Reset]) --> CheckSaved{"Saved SSID\nin NVS?"}
+    CheckSaved -- No --> Portal["Open AP: ESP32-hostname-AP\n192.168.4.1 (180 s timeout)\nIO2 button remains active"]
+    CheckSaved -- Yes --> Search["Search Saved SSID (120 s)\nRetry every 10 s\nIO2 & IO8 (3s hold) active"]
 
-    Search -- Connected --> Run["Normal Operation<br/>HTTP :80, WS :81, MQTT, mDNS, OTA"]
+    Search -- Connected --> Run["Normal Operation\nHTTP :80, WS :81, MQTT, mDNS, OTA"]
     Search -- "Timeout (2 min) or IO8 3s" --> Portal
 
     Portal -- "New Wi-Fi Saved" --> Run
     Portal -- "Timeout (3 min, no new SSID)" --> CheckSaved
 
-    Run -->|"Wi-Fi Lost &gt; 2 min<br/>or Web/IO8 Trigger"| TriggerPortal["Stop WebUI + MQTT Offline<br/>Open Config Portal (180 s)"]
+    Run -->|"Wi-Fi Lost > 2 min\nor Web/IO8 Trigger"| TriggerPortal["Stop WebUI + MQTT Offline\nOpen Config Portal (180 s)"]
     TriggerPortal --> Restart([ESP.restart]) --> Boot
 ```
 
@@ -109,7 +114,8 @@ For full architecture, sequence, and FreeRTOS task diagrams suitable for present
 ├── Doxyfile                    # Doxygen + Graphviz configuration
 ├── README.md                   # Project overview & quickstart
 ├── docs/
-│   └── SYSTEM_ARCHITECTURE.md  # Detailed presentation graphs (Mermaid)
+│   ├── SYSTEM_ARCHITECTURE.md  # Detailed presentation graphs (Mermaid)
+│   └── doxygen/html/           # Generated Doxygen HTML + interactive SVG graphs
 └── src/
     ├── main.cpp                # Boot orchestration, ArduinoOTA, loop & Wi-Fi monitor
     ├── config.h / config.cpp   # NVS settings, sanitization, Wi-Fi search & portal
