@@ -1,0 +1,39 @@
+<map id="getAvailabilityTopic" name="getAvailabilityTopic">
+<area shape="rect" id="Node000001" title=" " alt="" coords="625,92,758,119"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="720,77,711,73,691,71,673,73,663,77,661,83,666,92,660,91,655,83,659,74,671,67,691,65,713,68,726,77"/>
+<area shape="rect" id="Node000002" href="$group__mqtt.html#ga7e516b30f4e08cb220185f00104c5970" title="Publish retained LWT &quot;offline&quot; status, pause probing, and disconnect cleanly." alt="" coords="276,179,401,205"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="617,124,397,181,395,176,621,122"/>
+<area shape="rect" id="Node000009" href="$mqtt__ha_8cpp.html#a00cc6e37fa20006051f4a3dccf8e5ce4" title=" " alt="" coords="281,41,396,68"/>
+<area shape="poly" id="edge19_Node000001_Node000009" title=" " alt="" coords="607,100,449,83,395,71,394,66,450,77,612,98"/>
+<area shape="rect" id="Node000011" href="$mqtt__ha_8cpp.html#aaf747d1588acbe2071334700c371ccb7" title=" " alt="" coords="449,41,577,68"/>
+<area shape="poly" id="edge24_Node000001_Node000011" title=" " alt="" coords="625,88,563,71,563,66,630,87"/>
+<area shape="poly" id="edge15_Node000002_Node000002" title=" " alt="" coords="366,163,358,160,339,157,321,159,311,164,309,169,314,179,309,178,304,170,308,160,319,154,339,152,359,155,372,163"/>
+<area shape="rect" id="Node000003" href="$group__webui.html#ga6197e94218f5f0febc0a35e777fb3475" title="Service pending HTTP requests, WebSocket traffic, delayed actions, and status pushes." alt="" coords="118,104,216,131"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="291,173,227,145,202,134,201,129,229,140,296,171"/>
+<area shape="rect" id="Node000005" href="$group__webui.html#ga818909dc80498d9c5bb8bda01687a960" title="Start the HTTP server (port 80) and WebSocket server (port 81)." alt="" coords="129,328,206,355"/>
+<area shape="poly" id="edge7_Node000002_Node000005" title=" " alt="" coords="314,215,230,294,187,330,184,325,226,290,309,217"/>
+<area shape="rect" id="Node000007" href="$main_8cpp.html#a38ae8e1dfae8064f08254147ed5f84b3" title="Gracefully stop network services, open the SoftAP Config Portal, and restart." alt="" coords="107,179,228,205"/>
+<area shape="poly" id="edge11_Node000002_Node000007" title=" " alt="" coords="258,193,229,195,228,189,263,191"/>
+<area shape="rect" id="Node000008" href="$main_8cpp.html#a8c971237047f87216b3481d2256cd6b4" title="Configure and start network OTA updates via ArduinoOTA." alt="" coords="108,253,226,280"/>
+<area shape="poly" id="edge16_Node000002_Node000008" title=" " alt="" coords="290,213,201,255,199,250,294,211"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="189,89,182,85,167,83,154,85,146,89,145,95,148,104,143,103,139,95,142,86,152,80,167,77,184,80,194,88"/>
+<area shape="rect" id="Node000004" href="$main_8cpp.html#afe461d27b9c48d5921c00d521181f12f" title="Service Web UI, OTA, MQTT, physical buttons, and the 2&#45;minute Wi&#45;Fi loss watchdog." alt="" coords="9,104,55,131"/>
+<area shape="poly" id="edge5_Node000003_Node000004" title=" " alt="" coords="101,119,56,120,54,115,105,115"/>
+<area shape="poly" id="edge6_Node000004_Node000004" title=" " alt="" coords="53,90,47,85,32,83,18,85,11,89,9,95,13,103,8,104,4,95,7,86,16,80,32,77,49,80,58,88"/>
+<area shape="poly" id="edge8_Node000005_Node000005" title=" " alt="" coords="189,312,182,309,167,307,154,309,146,313,145,319,148,329,143,326,139,319,142,310,152,304,167,301,184,304,194,313"/>
+<area shape="rect" id="Node000006" href="$main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d" title="Initialize NVS configuration, relays, Wi&#45;Fi failover, mDNS, OTA, Web UI, and MQTT." alt="" coords="5,253,59,280"/>
+<area shape="poly" id="edge9_Node000005_Node000006" title=" " alt="" coords="126,322,57,283,59,278,131,319"/>
+<area shape="poly" id="edge10_Node000006_Node000006" title=" " alt="" coords="53,239,47,234,32,232,18,234,11,238,9,244,13,252,8,253,4,245,7,235,16,229,32,227,49,229,58,237"/>
+<area shape="poly" id="edge12_Node000007_Node000004" title=" " alt="" coords="126,172,55,132,55,127,131,169"/>
+<area shape="poly" id="edge14_Node000007_Node000006" title=" " alt="" coords="114,214,108,220,53,255,50,251,105,215,118,211"/>
+<area shape="poly" id="edge13_Node000007_Node000007" title=" " alt="" coords="189,164,182,160,167,157,154,159,146,164,145,170,148,178,143,178,139,170,142,161,152,154,167,152,184,155,194,163"/>
+<area shape="poly" id="edge17_Node000008_Node000006" title=" " alt="" coords="91,268,60,269,58,264,95,265"/>
+<area shape="poly" id="edge18_Node000008_Node000008" title=" " alt="" coords="189,238,182,234,167,232,154,234,146,238,145,244,148,253,143,252,139,245,142,235,152,229,167,227,184,229,194,238"/>
+<area shape="poly" id="edge23_Node000009_Node000009" title=" " alt="" coords="366,26,358,22,339,20,321,22,311,27,309,32,314,41,309,41,304,33,308,23,319,17,339,15,359,17,372,26"/>
+<area shape="rect" id="Node000010" href="$group__mqtt.html#ga6486046a18c78302adfce7b6b4dc09d4" title="Maintain MQTT broker connection and process incoming command messages." alt="" coords="125,29,210,56"/>
+<area shape="poly" id="edge20_Node000009_Node000010" title=" " alt="" coords="264,51,211,48,210,43,268,48"/>
+<area shape="poly" id="edge22_Node000010_Node000004" title=" " alt="" coords="115,65,108,70,53,106,49,102,105,66,118,61"/>
+<area shape="poly" id="edge21_Node000010_Node000010" title=" " alt="" coords="189,15,182,10,167,8,154,10,146,14,145,20,148,29,143,29,139,21,142,11,152,5,167,3,184,5,194,13"/>
+<area shape="poly" id="edge25_Node000011_Node000009" title=" " alt="" coords="431,56,397,57,396,52,436,54"/>
+<area shape="poly" id="edge26_Node000011_Node000011" title=" " alt="" coords="541,26,532,22,513,20,495,22,485,27,483,32,488,41,483,40,478,33,481,23,493,17,513,15,534,17,546,26"/>
+</map>

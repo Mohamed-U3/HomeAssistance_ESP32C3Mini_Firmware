@@ -1,0 +1,26 @@
+<map id="initMqtt" name="initMqtt">
+<area shape="rect" id="Node000001" title="Initialize MQTT client settings and spawn the FreeRTOS background probe task." alt="" coords="5,155,70,181"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="13,155,10,146,12,137,22,130,38,128,54,131,64,139,59,140,52,136,37,133,24,135,17,140,15,146,19,154"/>
+<area shape="rect" id="Node000002" href="$mqtt__ha_8cpp.html#a19cd0c12d2e6eda317fc681281f2ce3a" title=" " alt="" coords="123,104,222,131"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="69,154,123,134,119,139,72,158"/>
+<area shape="rect" id="Node000007" href="$mqtt__ha_8cpp.html#a375d83b3284dbf9d108936eaed2e6c63" title=" " alt="" coords="275,204,356,231"/>
+<area shape="poly" id="edge12_Node000001_Node000007" title=" " alt="" coords="69,168,142,177,228,191,263,201,257,201,226,196,141,182,70,174"/>
+<area shape="rect" id="Node000008" href="$mqtt__ha_8cpp.html#a5d1ad6122cdafdfd840cc931c56430b7" title=" " alt="" coords="118,229,227,256"/>
+<area shape="poly" id="edge14_Node000001_Node000008" title=" " alt="" coords="64,179,135,220,131,223,62,184"/>
+<area shape="poly" id="edge3_Node000002_Node000002" title=" " alt="" coords="148,103,144,95,147,86,157,80,172,77,189,80,199,89,194,89,187,85,172,83,159,85,152,89,150,95,154,104"/>
+<area shape="rect" id="Node000003" href="$group__relays.html#gaf7cbe2f5eeb3494b310d0ea10fcd055d" title="Set a single relay&#39;s state and synchronize GPIO, NVS, MQTT, and WebSocket clients." alt="" coords="279,104,352,131"/>
+<area shape="poly" id="edge4_Node000002_Node000003" title=" " alt="" coords="222,115,266,116,261,118,223,120"/>
+<area shape="poly" id="edge11_Node000003_Node000003" title=" " alt="" coords="290,103,286,95,289,86,299,80,316,77,333,80,344,89,338,89,331,85,316,83,301,85,293,89,292,95,295,104"/>
+<area shape="rect" id="Node000004" href="$relays_8cpp.html#a9cfb1378655154eed8cc8a6ce38d3047" title=" " alt="" coords="409,29,515,56"/>
+<area shape="poly" id="edge5_Node000003_Node000004" title=" " alt="" coords="339,101,403,66,412,64,417,62,406,70,342,106"/>
+<area shape="rect" id="Node000005" href="$relays_8cpp.html#a1e50f221535f81bfe7b471ecbc94b285" title=" " alt="" coords="405,104,519,131"/>
+<area shape="poly" id="edge7_Node000003_Node000005" title=" " alt="" coords="352,115,392,117,387,118,353,120"/>
+<area shape="rect" id="Node000006" href="$group__config.html#ga5dcd56d2e824768c1a2809ba0090f7bf" title="Persist the 8&#45;bit relay state bitmask to NVS only when it has changed." alt="" coords="404,179,520,205"/>
+<area shape="poly" id="edge9_Node000003_Node000006" title=" " alt="" coords="344,129,423,171,418,171,343,134"/>
+<area shape="poly" id="edge6_Node000004_Node000004" title=" " alt="" coords="436,28,432,21,435,11,445,5,462,3,480,5,491,14,485,14,478,10,462,8,447,10,439,14,437,20,441,30"/>
+<area shape="poly" id="edge8_Node000005_Node000005" title=" " alt="" coords="436,103,432,95,435,86,445,80,462,77,480,80,491,89,485,88,478,85,462,83,447,85,439,89,437,95,441,105"/>
+<area shape="poly" id="edge10_Node000006_Node000006" title=" " alt="" coords="436,177,432,170,435,160,445,154,462,152,480,155,490,164,485,163,478,160,462,157,447,159,439,164,437,170,441,179"/>
+<area shape="poly" id="edge13_Node000007_Node000007" title=" " alt="" coords="290,202,286,195,289,186,299,180,316,177,333,180,344,189,338,188,331,185,316,183,301,185,293,189,292,195,295,205"/>
+<area shape="poly" id="edge15_Node000008_Node000007" title=" " alt="" coords="227,230,257,228,262,227,228,236"/>
+<area shape="poly" id="edge16_Node000008_Node000008" title=" " alt="" coords="148,228,144,221,147,211,157,205,172,203,189,205,199,215,194,214,187,210,172,208,159,210,152,214,150,220,153,230"/>
+</map>

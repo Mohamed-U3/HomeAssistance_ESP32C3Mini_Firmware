@@ -1,0 +1,7 @@
+<map id="initRelays" name="initRelays">
+<area shape="rect" id="Node000001" title="Configure relay and button GPIOs and apply the configured PowerOnMode." alt="" coords="107,29,186,56"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="164,13,158,10,146,8,135,10,129,14,128,20,131,30,126,28,122,20,125,11,133,5,146,3,160,5,169,14"/>
+<area shape="rect" id="Node000002" href="$main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d" title="Initialize NVS configuration, relays, Wi&#45;Fi failover, mDNS, OTA, Web UI, and MQTT." alt="" coords="5,29,59,56"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="89,43,59,45,59,40,94,42"/>
+<area shape="poly" id="edge3_Node000002_Node000002" title=" " alt="" coords="49,14,44,10,32,8,21,10,15,14,13,20,16,28,11,29,8,20,10,11,19,5,32,3,46,5,55,13"/>
+</map>

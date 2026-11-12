@@ -1,0 +1,17 @@
+<map id="onPortalButtonDuringSearch" name="onPortalButtonDuringSearch">
+<area shape="rect" id="Node000001" title="Callback invoked if IO8 is held for 3 seconds during startup Wi&#45;Fi search." alt="" coords="416,79,603,105"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="540,63,530,60,509,57,490,59,480,64,477,69,482,79,477,77,472,70,476,60,489,54,510,52,532,55,545,64"/>
+<area shape="rect" id="Node000002" href="$main_8cpp.html#a01939620b305005d0e0e011f1b9fcd63" title="Tick handler passed into Wi&#45;Fi search and portal loops to keep physical buttons active." alt="" coords="276,79,368,105"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="398,92,369,95,369,89,403,92"/>
+<area shape="poly" id="edge10_Node000002_Node000002" title=" " alt="" coords="347,63,339,60,322,57,306,59,298,64,296,69,300,79,295,77,291,70,294,60,305,54,322,52,341,55,352,64"/>
+<area shape="rect" id="Node000003" href="$main_8cpp.html#a38ae8e1dfae8064f08254147ed5f84b3" title="Gracefully stop network services, open the SoftAP Config Portal, and restart." alt="" coords="107,53,228,80"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="258,82,228,79,228,74,263,82"/>
+<area shape="rect" id="Node000005" href="$main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d" title="Initialize NVS configuration, relays, Wi&#45;Fi failover, mDNS, OTA, Web UI, and MQTT." alt="" coords="5,104,59,131"/>
+<area shape="poly" id="edge9_Node000002_Node000005" title=" " alt="" coords="261,100,59,118,59,112,261,95"/>
+<area shape="poly" id="edge6_Node000003_Node000003" title=" " alt="" coords="189,38,182,34,167,32,154,34,146,38,145,44,148,54,143,52,139,45,142,35,152,29,167,27,184,29,194,38"/>
+<area shape="rect" id="Node000004" href="$main_8cpp.html#afe461d27b9c48d5921c00d521181f12f" title="Service Web UI, OTA, MQTT, physical buttons, and the 2&#45;minute Wi&#45;Fi loss watchdog." alt="" coords="9,29,55,56"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="89,55,56,49,55,44,94,52"/>
+<area shape="poly" id="edge7_Node000003_Node000005" title=" " alt="" coords="115,89,60,110,58,105,116,83"/>
+<area shape="poly" id="edge5_Node000004_Node000004" title=" " alt="" coords="53,15,47,10,32,8,18,10,11,14,9,20,13,28,8,29,4,21,7,11,16,5,32,3,49,5,58,13"/>
+<area shape="poly" id="edge8_Node000005_Node000005" title=" " alt="" coords="53,89,47,85,32,83,18,85,11,89,9,95,13,103,8,104,4,95,7,86,16,80,32,77,49,80,59,88"/>
+</map>

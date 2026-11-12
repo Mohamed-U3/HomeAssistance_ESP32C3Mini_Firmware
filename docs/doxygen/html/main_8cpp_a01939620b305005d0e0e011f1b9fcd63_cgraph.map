@@ -1,0 +1,28 @@
+<map id="wifiWaitTick" name="wifiWaitTick">
+<area shape="rect" id="Node000001" title="Tick handler passed into Wi&#45;Fi search and portal loops to keep physical buttons active." alt="" coords="5,104,98,131"/>
+<area shape="poly" id="edge17_Node000001_Node000001" title=" " alt="" coords="19,104,14,95,18,86,31,79,52,77,74,80,87,88,82,89,72,85,51,83,32,85,22,89,19,95,24,103"/>
+<area shape="rect" id="Node000002" href="$group__relays.html#ga1583a5cd071b0df65d66ca83d0cd065c" title="Poll physical buttons with software debouncing." alt="" coords="187,67,291,93"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="97,106,174,92,169,95,99,111"/>
+<area shape="rect" id="Node000009" href="$main_8cpp.html#a9976b7287695f1a56fa1a131f64a32ca" title="Callback invoked if IO8 is held for 3 seconds during startup Wi&#45;Fi search." alt="" coords="146,141,332,168"/>
+<area shape="poly" id="edge15_Node000001_Node000009" title=" " alt="" coords="98,124,156,137,151,139,98,129"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="206,66,201,58,205,48,218,42,239,40,261,43,275,51,269,51,260,48,239,45,219,47,209,52,206,57,212,67"/>
+<area shape="rect" id="Node000003" href="$group__relays.html#gabdc28eba4b1755a00dd0902819774c54" title="Smart master toggle: turn all OFF if any relay is ON, otherwise turn all ON." alt="" coords="380,67,528,93"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="291,77,367,79,362,81,292,83"/>
+<area shape="poly" id="edge14_Node000003_Node000003" title=" " alt="" coords="425,65,420,58,423,48,435,42,454,40,475,43,487,52,482,51,473,48,454,45,437,47,427,52,425,57,430,67"/>
+<area shape="rect" id="Node000004" href="$group__relays.html#ga633ffc83b64a9caf1166dcd5cc345986" title="Set all relays to the same state in a single batch." alt="" coords="576,67,672,93"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="529,77,563,80,558,80,529,83"/>
+<area shape="poly" id="edge7_Node000004_Node000004" title=" " alt="" coords="598,65,594,58,597,48,607,42,624,40,642,43,653,52,648,51,640,48,624,45,609,47,601,52,599,57,603,67"/>
+<area shape="rect" id="Node000005" href="$relays_8cpp.html#a9cfb1378655154eed8cc8a6ce38d3047" title=" " alt="" coords="720,29,825,56"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="672,65,702,60,707,59,673,71"/>
+<area shape="rect" id="Node000006" href="$relays_8cpp.html#ab1e7ade513db2c1075cf0c37eb32c58c" title=" " alt="" coords="725,104,820,131"/>
+<area shape="poly" id="edge8_Node000004_Node000006" title=" " alt="" coords="672,89,712,102,707,101,672,95"/>
+<area shape="poly" id="edge6_Node000005_Node000005" title=" " alt="" coords="746,28,742,21,745,11,755,5,772,3,790,5,801,15,796,14,788,10,772,8,757,10,749,14,747,20,751,30"/>
+<area shape="poly" id="edge13_Node000006_Node000006" title=" " alt="" coords="746,102,742,95,745,86,755,80,772,77,790,80,801,89,796,88,788,85,772,83,757,85,749,89,747,95,751,105"/>
+<area shape="rect" id="Node000007" href="$relays_8cpp.html#a1e50f221535f81bfe7b471ecbc94b285" title=" " alt="" coords="874,67,988,93"/>
+<area shape="poly" id="edge9_Node000006_Node000007" title=" " alt="" coords="820,104,856,97,861,97,821,109"/>
+<area shape="rect" id="Node000008" href="$group__config.html#ga5dcd56d2e824768c1a2809ba0090f7bf" title="Persist the 8&#45;bit relay state bitmask to NVS only when it has changed." alt="" coords="873,141,988,168"/>
+<area shape="poly" id="edge11_Node000006_Node000008" title=" " alt="" coords="821,126,861,138,855,137,820,131"/>
+<area shape="poly" id="edge10_Node000007_Node000007" title=" " alt="" coords="903,65,898,58,902,48,913,42,931,40,950,43,961,52,956,51,948,48,931,45,914,47,906,52,904,57,908,67"/>
+<area shape="poly" id="edge12_Node000008_Node000008" title=" " alt="" coords="903,140,898,133,902,123,913,117,931,115,950,117,961,127,956,125,948,122,931,120,914,122,906,127,904,132,908,142"/>
+<area shape="poly" id="edge16_Node000009_Node000009" title=" " alt="" coords="207,140,201,133,205,123,218,117,239,115,261,117,275,126,269,126,260,122,239,120,219,122,209,127,206,132,212,142"/>
+</map>

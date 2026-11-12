@@ -1,0 +1,20 @@
+<map id="runConfigPortal" name="runConfigPortal">
+<area shape="rect" id="Node000001" title="Start the SoftAP configuration portal for up to timeoutSec seconds." alt="" coords="5,85,117,112"/>
+<area shape="poly" id="edge5_Node000001_Node000001" title=" " alt="" coords="35,85,31,77,34,67,44,61,61,59,79,61,90,69,84,71,77,66,61,64,46,66,38,70,36,76,40,84"/>
+<area shape="rect" id="Node000002" href="$config_8cpp.html#a47d9ff48fb2c32cdba69fcdd53ff70cb" title=" " alt="" coords="300,29,442,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="82,83,120,63,164,47,225,37,287,36,282,39,225,42,165,52,122,68,86,87"/>
+<area shape="rect" id="Node000003" href="$group__config.html#gaf857f35623b29612a3b4cc45dd6fff23" title="Build the runtime SoftAP SSID from the configured hostname (ESP32&#45;&lt;hostname&gt;&#45;AP)." alt="" coords="168,85,249,112"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="116,96,154,97,150,100,118,101"/>
+<area shape="rect" id="Node000004" href="$group__config.html#ga688d00bbabd28fbaf9e0c50eca3adeae" title="Validate and persist appConfig fields to NVS." alt="" coords="165,160,252,187"/>
+<area shape="poly" id="edge6_Node000001_Node000004" title=" " alt="" coords="90,110,169,151,165,154,89,115"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="343,28,338,21,341,11,353,5,371,3,391,5,403,14,397,14,389,10,371,8,354,10,345,15,343,20,348,30"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="182,84,178,77,181,67,192,61,208,59,226,61,237,70,232,70,224,66,208,64,193,66,185,70,183,76,188,85"/>
+<area shape="poly" id="edge7_Node000004_Node000002" title=" " alt="" coords="221,157,254,123,298,85,330,66,334,63,302,89,258,127,224,162"/>
+<area shape="poly" id="edge12_Node000004_Node000004" title=" " alt="" coords="182,159,178,151,181,142,192,136,208,133,226,136,237,145,232,144,224,141,208,139,193,141,185,145,183,151,187,160"/>
+<area shape="rect" id="Node000005" href="$group__config.html#gaca260bb70c6624380e4754f279f35df8" title="Sanitize a hostname in&#45;place to [a&#45;zA&#45;Z0&#45;9&#45;] with fallback to DEFAULT_HOSTNAME." alt="" coords="308,123,434,149"/>
+<area shape="poly" id="edge8_Node000004_Node000005" title=" " alt="" coords="252,161,298,153,293,154,253,166"/>
+<area shape="rect" id="Node000006" href="$config_8cpp.html#ac251cd125b50d17e9d1740356cc99dd2" title=" " alt="" coords="326,197,416,224"/>
+<area shape="poly" id="edge10_Node000004_Node000006" title=" " alt="" coords="253,181,314,197,309,197,252,186"/>
+<area shape="poly" id="edge9_Node000005_Node000005" title=" " alt="" coords="343,121,338,114,341,104,353,98,371,96,391,99,403,108,397,107,389,104,371,101,354,103,345,108,343,113,348,123"/>
+<area shape="poly" id="edge11_Node000006_Node000006" title=" " alt="" coords="343,196,338,189,341,179,353,173,371,171,391,173,403,183,397,182,389,178,371,176,354,178,345,183,343,188,348,198"/>
+</map>

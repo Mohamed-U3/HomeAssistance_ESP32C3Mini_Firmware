@@ -1,0 +1,16 @@
+<map id="toggleAllRelays" name="toggleAllRelays">
+<area shape="rect" id="Node000001" title="Invert the state of every relay channel in a single batch." alt="" coords="5,67,118,93"/>
+<area shape="poly" id="edge9_Node000001_Node000001" title=" " alt="" coords="34,67,29,58,33,48,44,42,62,40,81,43,92,51,87,52,79,48,61,45,45,47,37,52,35,57,39,66"/>
+<area shape="rect" id="Node000002" href="$relays_8cpp.html#a9cfb1378655154eed8cc8a6ce38d3047" title=" " alt="" coords="166,29,271,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="117,64,153,57,148,60,119,69"/>
+<area shape="rect" id="Node000003" href="$relays_8cpp.html#ab1e7ade513db2c1075cf0c37eb32c58c" title=" " alt="" coords="171,104,266,131"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="118,91,158,102,153,103,118,96"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="191,28,186,21,190,11,201,5,218,3,237,5,249,14,243,14,236,10,218,8,202,10,194,15,192,20,196,29"/>
+<area shape="poly" id="edge8_Node000003_Node000003" title=" " alt="" coords="191,103,186,95,190,86,201,80,218,77,237,80,249,89,243,88,236,85,218,83,202,85,194,89,192,95,196,104"/>
+<area shape="rect" id="Node000004" href="$relays_8cpp.html#a1e50f221535f81bfe7b471ecbc94b285" title=" " alt="" coords="320,67,434,93"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="266,104,302,98,307,96,267,109"/>
+<area shape="rect" id="Node000005" href="$group__config.html#ga5dcd56d2e824768c1a2809ba0090f7bf" title="Persist the 8&#45;bit relay state bitmask to NVS only when it has changed." alt="" coords="319,141,434,168"/>
+<area shape="poly" id="edge6_Node000003_Node000005" title=" " alt="" coords="267,126,307,138,301,138,266,131"/>
+<area shape="poly" id="edge5_Node000004_Node000004" title=" " alt="" coords="349,65,344,58,348,48,359,42,377,40,396,43,407,52,402,51,394,48,377,45,360,47,352,52,350,57,354,67"/>
+<area shape="poly" id="edge7_Node000005_Node000005" title=" " alt="" coords="349,140,344,133,348,123,359,117,377,115,396,117,407,127,402,126,394,122,377,120,360,122,352,127,350,132,354,142"/>
+</map>

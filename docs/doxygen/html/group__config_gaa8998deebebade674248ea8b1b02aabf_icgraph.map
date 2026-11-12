@@ -1,0 +1,14 @@
+<map id="hasSavedWifi" name="hasSavedWifi">
+<area shape="rect" id="Node000001" title="Check whether STA Wi&#45;Fi credentials are stored in ESP32 NVS." alt="" coords="478,55,580,81"/>
+<area shape="poly" id="edge8_Node000001_Node000001" title=" " alt="" coords="555,39,547,36,529,33,512,35,503,40,501,45,505,55,501,53,496,46,499,36,510,30,529,28,548,31,560,40"/>
+<area shape="rect" id="Node000002" href="$group__config.html#gae8f033c18f4b2de9f04696a851f18dcd" title="Search and retry connecting to the saved Wi&#45;Fi SSID for up to timeoutMs." alt="" coords="302,29,430,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="460,58,430,55,430,50,465,58"/>
+<area shape="rect" id="Node000003" href="$group__config.html#ga98066adaeb8cb096485d48e91c27e50e" title="Ensure Wi&#45;Fi connectivity at boot using a resilient search&#45;and&#45;portal cycle." alt="" coords="108,55,254,81"/>
+<area shape="poly" id="edge7_Node000001_Node000003" title=" " alt="" coords="460,68,255,71,255,65,465,68"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="392,14,384,10,366,8,349,10,340,15,338,20,342,30,338,28,333,21,336,11,348,5,366,3,386,5,397,15"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="290,53,255,61,254,55,284,54"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="205,39,197,36,181,33,166,35,158,40,156,46,160,55,155,53,151,46,154,36,164,30,181,28,199,31,210,40"/>
+<area shape="rect" id="Node000004" href="$main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d" title="Initialize NVS configuration, relays, Wi&#45;Fi failover, mDNS, OTA, Web UI, and MQTT." alt="" coords="7,55,60,81"/>
+<area shape="poly" id="edge5_Node000003_Node000004" title=" " alt="" coords="90,69,61,71,60,65,95,67"/>
+<area shape="poly" id="edge6_Node000004_Node000004" title=" " alt="" coords="57,40,49,36,33,33,18,35,10,40,8,46,12,53,7,55,3,46,6,36,16,30,33,28,51,31,62,39"/>
+</map>

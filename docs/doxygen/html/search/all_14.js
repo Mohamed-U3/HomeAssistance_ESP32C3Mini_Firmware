@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['pendingactionat_0',['pendingActionAt',['../web__ui_8cpp.html#a98ce004e814eeb43dfece5317b1824bc',1,'web_ui.cpp']]],
+  ['pendingportal_1',['pendingPortal',['../web__ui_8cpp.html#afd88044a9b401948a937e6ae9986c8fb',1,'web_ui.cpp']]],
+  ['pendingreboot_2',['pendingReboot',['../web__ui_8cpp.html#a00123dcb57a106fea88fb7674302e686',1,'web_ui.cpp']]],
+  ['persistcurrentrelaymask_3',['persistCurrentRelayMask',['../group__relays.html#ga3805435ce157d4f51650a325f6e31ee2',1,'persistCurrentRelayMask():&#160;relays.cpp'],['../group__relays.html#ga3805435ce157d4f51650a325f6e31ee2',1,'persistCurrentRelayMask():&#160;relays.cpp']]],
+  ['pinout_4',['Hardware Pinout',['../index.html#autotoc_md4',1,'']]],
+  ['platformio_5',['1. Build &amp;amp; Flash (PlatformIO)',['../index.html#autotoc_md13',1,'']]],
+  ['portal_20flow_6',['Wi-Fi Failover &amp;amp; Config Portal Flow',['../index.html#autotoc_md8',1,'']]],
+  ['portal_20state_20machine_7',['3. Wi-Fi Connection, 2-Minute Failover &amp;amp; Portal State Machine',['../md_docs_2_s_y_s_t_e_m___a_r_c_h_i_t_e_c_t_u_r_e.html#autotoc_md27',1,'']]],
+  ['portalactioncallback_8',['PortalActionCallback',['../group__webui.html#gac022501d6a8ed23952d5fca0931e97b3',1,'web_ui.h']]],
+  ['portalactioncb_9',['portalActionCb',['../web__ui_8cpp.html#ad1c04d879cb5015ef24767ddb7ffe20d',1,'web_ui.cpp']]],
+  ['portaltriggercallback_10',['PortalTriggerCallback',['../group__relays.html#ga1e6c6cfb8aac18c21d8748bac0db7f13',1,'relays.h']]],
+  ['portaltriggerrequested_11',['portalTriggerRequested',['../main_8cpp.html#aac6a0528b9f5cccb60c8ab724e9a042d',1,'main.cpp']]],
+  ['power_5fon_5fall_5foff_12',['POWER_ON_ALL_OFF',['../group__config.html#ggabc908edbe6183635a03e97917c4b5be7a939b161ad7bda4a731c7d5f0b7636a57',1,'config.h']]],
+  ['power_5fon_5fall_5fon_13',['POWER_ON_ALL_ON',['../group__config.html#ggabc908edbe6183635a03e97917c4b5be7a3ddf1c4ff6c9497ed6902547163b5df5',1,'config.h']]],
+  ['power_5fon_5fmode_14',['power_on_mode',['../struct_app_config.html#a191d6eb67c50cb56cf940883bac5fa3f',1,'AppConfig']]],
+  ['power_5fon_5frestore_15',['POWER_ON_RESTORE',['../group__config.html#ggabc908edbe6183635a03e97917c4b5be7a711ffc3e89064176145ab310f0725ec2',1,'config.h']]],
+  ['poweronmode_16',['PowerOnMode',['../group__config.html#gabc908edbe6183635a03e97917c4b5be7',1,'config.h']]],
+  ['presentation_20diagrams_17',['System Architecture &amp;amp; Presentation Diagrams',['../md_docs_2_s_y_s_t_e_m___a_r_c_h_i_t_e_c_t_u_r_e.html',1,'']]],
+  ['probe_20lwt_20flow_18',['5. Non-Blocking FreeRTOS MQTT Probe &amp;amp; LWT Flow',['../md_docs_2_s_y_s_t_e_m___a_r_c_h_i_t_e_c_t_u_r_e.html#autotoc_md31',1,'']]],
+  ['probemutex_19',['probeMutex',['../mqtt__ha_8cpp.html#a74f66032e8b89f3fb2718c47e5d31682',1,'mqtt_ha.cpp']]],
+  ['project_20structure_20',['Project Structure',['../index.html#autotoc_md10',1,'']]],
+  ['provisioning_21',['2. First-Time Provisioning',['../index.html#autotoc_md14',1,'']]],
+  ['publishmqttoffline_22',['publishMqttOffline',['../group__mqtt.html#ga7e516b30f4e08cb220185f00104c5970',1,'publishMqttOffline():&#160;mqtt_ha.cpp'],['../group__mqtt.html#ga7e516b30f4e08cb220185f00104c5970',1,'publishMqttOffline():&#160;mqtt_ha.cpp']]],
+  ['publishmqttstate_23',['publishMqttState',['../group__mqtt.html#gaa56714abe225216dfa54cf21e3e7c0cd',1,'publishMqttState(size_t index):&#160;mqtt_ha.cpp'],['../group__mqtt.html#gaa56714abe225216dfa54cf21e3e7c0cd',1,'publishMqttState(size_t index):&#160;mqtt_ha.cpp']]]
+];

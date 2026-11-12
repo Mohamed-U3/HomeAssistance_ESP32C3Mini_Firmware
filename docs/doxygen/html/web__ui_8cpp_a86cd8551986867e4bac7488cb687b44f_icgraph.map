@@ -1,0 +1,10 @@
+<map id="checkAuth" name="checkAuth">
+<area shape="rect" id="Node000001" title=" " alt="" coords="232,29,315,56"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="294,13,287,10,274,8,261,10,254,14,252,20,256,30,251,28,247,21,250,11,259,5,274,3,290,5,299,15"/>
+<area shape="rect" id="Node000002" href="$group__webui.html#ga818909dc80498d9c5bb8bda01687a960" title="Start the HTTP server (port 80) and WebSocket server (port 81)." alt="" coords="107,29,184,56"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="214,43,184,45,184,40,219,43"/>
+<area shape="poly" id="edge3_Node000002_Node000002" title=" " alt="" coords="163,13,157,10,145,8,134,10,128,14,127,20,130,30,125,28,121,20,124,11,132,5,145,3,159,5,168,14"/>
+<area shape="rect" id="Node000003" href="$main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d" title="Initialize NVS configuration, relays, Wi&#45;Fi failover, mDNS, OTA, Web UI, and MQTT." alt="" coords="5,29,59,56"/>
+<area shape="poly" id="edge4_Node000002_Node000003" title=" " alt="" coords="89,43,59,45,59,40,94,42"/>
+<area shape="poly" id="edge5_Node000003_Node000003" title=" " alt="" coords="49,14,44,10,32,8,21,10,15,14,13,20,17,28,11,29,8,20,10,11,19,5,32,3,46,5,54,13"/>
+</map>

@@ -1,0 +1,60 @@
+# Doxyfile for ESP32-C3 8-Channel Smart Relay Controller
+
+PROJECT_NAME           = "ESP32-C3 Smart Relay Controller"
+PROJECT_BRIEF          = "8-Channel Home Assistant MQTT & WebSocket Relay Firmware"
+OUTPUT_DIRECTORY       = docs/doxygen
+CREATE_SUBDIRS         = NO
+ALLOW_UNICODE_NAMES    = YES
+OUTPUT_LANGUAGE        = English
+
+# Input & Markdown integration
+INPUT                  = README.md docs/SYSTEM_ARCHITECTURE.md src
+FILE_PATTERNS          = *.h *.hpp *.cpp *.c *.md
+RECURSIVE              = NO
+USE_MDFILE_AS_MAINPAGE = README.md
+MARKDOWN_SUPPORT       = YES
+EXTENSION_MAPPING      = ino=C++
+
+# Extraction settings
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = YES
+EXTRACT_STATIC         = YES
+EXTRACT_LOCAL_CLASSES  = YES
+OPTIMIZE_OUTPUT_FOR_C  = NO
+BUILTIN_STL_SUPPORT    = YES
+PREDEFINED             = PROGMEM=
+
+# Source browsing
+SOURCE_BROWSER         = YES
+INLINE_SOURCES         = NO
+REFERENCED_BY_RELATION = YES
+REFERENCES_RELATION    = YES
+
+# HTML output
+GENERATE_HTML          = YES
+HTML_OUTPUT            = html
+GENERATE_TREEVIEW      = YES
+HTML_COLORSTYLE        = AUTO_LIGHT
+GENERATE_LATEX         = NO
+
+# Graphviz / Diagrams (for presentation visuals)
+HAVE_DOT               = YES
+DOT_PATH               = "C:/Program Files/Graphviz/bin"
+DOT_NUM_THREADS        = 2
+UML_LOOK               = YES
+TEMPLATE_RELATIONS     = YES
+INCLUDE_GRAPH          = YES
+INCLUDED_BY_GRAPH      = YES
+CALL_GRAPH             = YES
+CALLER_GRAPH           = YES
+COLLABORATION_GRAPH    = YES
+GROUP_GRAPHS           = YES
+DIRECTORY_GRAPH        = YES
+GRAPHICAL_HIERARCHY    = YES
+DOT_IMAGE_FORMAT       = svg
+INTERACTIVE_SVG        = YES
+GENERATE_LEGEND        = YES
+
+QUIET                  = NO
+WARNINGS               = YES
+WARN_IF_UNDOCUMENTED   = YES

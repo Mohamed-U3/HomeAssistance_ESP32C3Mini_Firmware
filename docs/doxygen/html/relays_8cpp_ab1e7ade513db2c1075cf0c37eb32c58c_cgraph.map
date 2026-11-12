@@ -1,0 +1,10 @@
+<map id="syncOutputs" name="syncOutputs">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,67,101,93"/>
+<area shape="poly" id="edge5_Node000001_Node000001" title=" " alt="" coords="26,67,22,58,25,48,36,42,53,40,72,43,83,51,77,52,70,48,53,45,37,47,29,52,27,57,31,66"/>
+<area shape="rect" id="Node000002" href="$relays_8cpp.html#a1e50f221535f81bfe7b471ecbc94b285" title=" " alt="" coords="149,29,264,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="100,66,136,59,132,61,102,71"/>
+<area shape="rect" id="Node000003" href="$group__config.html#ga5dcd56d2e824768c1a2809ba0090f7bf" title="Persist the 8&#45;bit relay state bitmask to NVS only when it has changed." alt="" coords="149,104,264,131"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="101,89,137,99,132,100,101,94"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="179,28,175,21,178,11,189,5,206,3,225,5,236,14,231,14,223,10,206,8,191,10,182,14,180,20,185,30"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="180,102,175,95,178,86,189,80,206,77,225,80,236,89,231,88,223,85,206,83,191,85,182,89,180,95,184,105"/>
+</map>

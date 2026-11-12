@@ -1,0 +1,23 @@
+<map id="setRelay" name="setRelay">
+<area shape="rect" id="Node000001" title="Set a single relay&#39;s state and synchronize GPIO, NVS, MQTT, and WebSocket clients." alt="" coords="610,67,683,93"/>
+<area shape="poly" id="edge7_Node000001_Node000001" title=" " alt="" coords="673,51,665,48,646,45,629,47,620,52,618,57,622,67,618,65,613,58,616,48,628,42,646,40,666,43,678,52"/>
+<area shape="rect" id="Node000002" href="$mqtt__ha_8cpp.html#a19cd0c12d2e6eda317fc681281f2ce3a" title=" " alt="" coords="432,29,530,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="592,68,530,56,530,51,597,68"/>
+<area shape="rect" id="Node000005" href="$group__relays.html#ga607bf5f8f430bdca13979ba385f0dc7d" title="Toggle a single relay identified by its ESP32&#45;C3 GPIO pin number." alt="" coords="400,104,562,131"/>
+<area shape="poly" id="edge8_Node000001_Node000005" title=" " alt="" coords="597,91,543,106,542,101,592,92"/>
+<area shape="poly" id="edge6_Node000002_Node000002" title=" " alt="" coords="508,14,499,10,481,8,464,10,455,15,453,20,457,30,452,28,447,21,451,11,462,5,481,3,501,5,513,14"/>
+<area shape="rect" id="Node000003" href="$group__mqtt.html#gaf9ea729a7f735bc6cce0c4d9f260e3f2" title="Initialize MQTT client settings and spawn the FreeRTOS background probe task." alt="" coords="113,29,178,56"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="415,45,178,45,178,40,417,40"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="162,14,157,10,145,8,134,10,128,14,127,20,130,29,125,28,121,20,124,11,132,5,145,3,159,5,168,14"/>
+<area shape="rect" id="Node000004" href="$main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d" title="Initialize NVS configuration, relays, Wi&#45;Fi failover, mDNS, OTA, Web UI, and MQTT." alt="" coords="5,67,59,93"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="96,60,60,74,58,69,100,56"/>
+<area shape="poly" id="edge5_Node000004_Node000004" title=" " alt="" coords="49,52,44,47,32,45,21,47,15,52,13,58,17,66,11,67,8,58,10,49,19,42,32,40,46,43,54,50"/>
+<area shape="poly" id="edge9_Node000005_Node000005" title=" " alt="" coords="508,88,499,85,481,83,464,85,455,89,453,95,457,105,452,102,447,95,451,86,462,80,481,77,501,80,513,89"/>
+<area shape="rect" id="Node000006" href="$web__ui_8cpp.html#a1e0488d07821284a93f644a94feb35b3" title=" " alt="" coords="232,104,352,131"/>
+<area shape="poly" id="edge10_Node000005_Node000006" title=" " alt="" coords="382,117,352,120,352,115,388,117"/>
+<area shape="poly" id="edge14_Node000006_Node000006" title=" " alt="" coords="316,88,308,85,292,83,277,85,269,89,267,95,271,105,266,102,262,95,265,86,275,80,292,77,310,80,321,89"/>
+<area shape="rect" id="Node000007" href="$group__webui.html#ga818909dc80498d9c5bb8bda01687a960" title="Start the HTTP server (port 80) and WebSocket server (port 81)." alt="" coords="107,104,184,131"/>
+<area shape="poly" id="edge11_Node000006_Node000007" title=" " alt="" coords="214,117,185,120,184,115,219,117"/>
+<area shape="poly" id="edge13_Node000007_Node000004" title=" " alt="" coords="90,101,59,91,59,86,95,99"/>
+<area shape="poly" id="edge12_Node000007_Node000007" title=" " alt="" coords="163,88,157,85,145,83,134,85,128,89,127,95,130,105,125,102,121,95,124,86,132,80,145,77,159,80,168,89"/>
+</map>

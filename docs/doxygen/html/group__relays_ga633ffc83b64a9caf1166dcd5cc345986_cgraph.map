@@ -1,0 +1,16 @@
+<map id="setAllRelays" name="setAllRelays">
+<area shape="rect" id="Node000001" title="Set all relays to the same state in a single batch." alt="" coords="5,67,101,93"/>
+<area shape="poly" id="edge3_Node000001_Node000001" title=" " alt="" coords="27,67,23,58,26,48,36,42,53,40,71,43,82,51,77,52,69,48,53,45,38,47,30,52,28,57,32,66"/>
+<area shape="rect" id="Node000002" href="$relays_8cpp.html#a9cfb1378655154eed8cc8a6ce38d3047" title=" " alt="" coords="149,29,254,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="100,66,136,58,131,61,102,70"/>
+<area shape="rect" id="Node000003" href="$relays_8cpp.html#ab1e7ade513db2c1075cf0c37eb32c58c" title=" " alt="" coords="154,104,249,131"/>
+<area shape="poly" id="edge4_Node000001_Node000003" title=" " alt="" coords="101,89,141,101,136,102,101,95"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="175,28,171,21,174,11,184,5,201,3,219,5,230,14,225,14,217,10,201,8,186,10,178,14,176,20,180,29"/>
+<area shape="poly" id="edge9_Node000003_Node000003" title=" " alt="" coords="175,103,171,95,174,86,184,80,201,77,219,80,230,89,225,88,217,85,201,83,186,85,178,89,176,95,180,104"/>
+<area shape="rect" id="Node000004" href="$relays_8cpp.html#a1e50f221535f81bfe7b471ecbc94b285" title=" " alt="" coords="302,67,417,93"/>
+<area shape="poly" id="edge5_Node000003_Node000004" title=" " alt="" coords="249,104,290,96,285,98,250,109"/>
+<area shape="rect" id="Node000005" href="$group__config.html#ga5dcd56d2e824768c1a2809ba0090f7bf" title="Persist the 8&#45;bit relay state bitmask to NVS only when it has changed." alt="" coords="302,141,417,168"/>
+<area shape="poly" id="edge7_Node000003_Node000005" title=" " alt="" coords="250,126,290,138,284,138,249,131"/>
+<area shape="poly" id="edge6_Node000004_Node000004" title=" " alt="" coords="332,65,327,58,331,48,342,42,360,40,379,43,390,52,385,51,377,48,360,45,343,47,335,52,333,57,337,67"/>
+<area shape="poly" id="edge8_Node000005_Node000005" title=" " alt="" coords="332,140,327,133,331,123,342,117,360,115,379,117,390,127,385,126,377,122,360,120,343,122,335,127,333,132,337,142"/>
+</map>

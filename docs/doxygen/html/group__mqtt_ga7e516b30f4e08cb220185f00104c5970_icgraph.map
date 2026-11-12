@@ -1,0 +1,25 @@
+<map id="publishMqttOffline" name="publishMqttOffline">
+<area shape="rect" id="Node000001" title="Publish retained LWT &quot;offline&quot; status, pause probing, and disconnect cleanly." alt="" coords="276,141,401,168"/>
+<area shape="poly" id="edge13_Node000001_Node000001" title=" " alt="" coords="366,126,358,122,339,120,321,122,311,127,309,132,314,142,309,140,304,133,308,123,319,117,339,115,359,117,372,126"/>
+<area shape="rect" id="Node000002" href="$group__webui.html#ga6197e94218f5f0febc0a35e777fb3475" title="Service pending HTTP requests, WebSocket traffic, delayed actions, and status pushes." alt="" coords="118,29,216,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="309,131,272,101,227,70,205,59,205,54,229,66,275,97,314,131"/>
+<area shape="rect" id="Node000004" href="$group__webui.html#ga818909dc80498d9c5bb8bda01687a960" title="Start the HTTP server (port 80) and WebSocket server (port 81)." alt="" coords="129,179,206,205"/>
+<area shape="poly" id="edge5_Node000001_Node000004" title=" " alt="" coords="258,173,207,186,206,181,263,171"/>
+<area shape="rect" id="Node000006" href="$main_8cpp.html#a38ae8e1dfae8064f08254147ed5f84b3" title="Gracefully stop network services, open the SoftAP Config Portal, and restart." alt="" coords="107,104,228,131"/>
+<area shape="poly" id="edge9_Node000001_Node000006" title=" " alt="" coords="258,138,229,133,228,128,263,137"/>
+<area shape="rect" id="Node000007" href="$main_8cpp.html#a8c971237047f87216b3481d2256cd6b4" title="Configure and start network OTA updates via ArduinoOTA." alt="" coords="108,253,226,280"/>
+<area shape="poly" id="edge14_Node000001_Node000007" title=" " alt="" coords="306,177,191,255,188,251,301,177"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="189,15,182,10,167,8,154,10,146,14,145,20,148,29,143,29,139,21,142,11,152,5,167,3,184,5,194,14"/>
+<area shape="rect" id="Node000003" href="$main_8cpp.html#afe461d27b9c48d5921c00d521181f12f" title="Service Web UI, OTA, MQTT, physical buttons, and the 2&#45;minute Wi&#45;Fi loss watchdog." alt="" coords="9,67,55,93"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="102,62,57,76,53,72,105,58"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="53,52,47,48,32,45,18,47,11,52,9,58,13,66,8,67,4,58,7,49,16,42,32,40,49,43,58,50"/>
+<area shape="poly" id="edge6_Node000004_Node000004" title=" " alt="" coords="189,163,182,160,167,157,154,159,146,164,145,170,148,179,143,178,139,170,142,161,152,154,167,152,184,155,194,163"/>
+<area shape="rect" id="Node000005" href="$main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d" title="Initialize NVS configuration, relays, Wi&#45;Fi failover, mDNS, OTA, Web UI, and MQTT." alt="" coords="5,179,59,205"/>
+<area shape="poly" id="edge7_Node000004_Node000005" title=" " alt="" coords="111,194,60,195,59,189,115,190"/>
+<area shape="poly" id="edge8_Node000005_Node000005" title=" " alt="" coords="53,164,47,160,32,157,18,159,11,164,9,170,13,178,8,179,4,170,7,161,16,154,32,152,49,155,58,163"/>
+<area shape="poly" id="edge10_Node000006_Node000003" title=" " alt="" coords="100,101,56,89,54,84,104,98"/>
+<area shape="poly" id="edge12_Node000006_Node000005" title=" " alt="" coords="114,139,108,145,53,180,50,176,105,140,118,136"/>
+<area shape="poly" id="edge11_Node000006_Node000006" title=" " alt="" coords="189,89,182,85,167,83,154,85,146,89,145,95,148,104,143,103,139,95,142,86,152,80,167,77,184,80,194,88"/>
+<area shape="poly" id="edge15_Node000007_Node000005" title=" " alt="" coords="126,247,57,208,59,203,131,244"/>
+<area shape="poly" id="edge16_Node000007_Node000007" title=" " alt="" coords="189,238,182,234,167,232,154,234,146,238,145,244,148,254,143,252,139,245,142,235,152,229,167,227,184,229,194,239"/>
+</map>

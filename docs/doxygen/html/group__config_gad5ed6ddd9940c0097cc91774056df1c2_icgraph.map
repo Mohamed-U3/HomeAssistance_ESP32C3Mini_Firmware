@@ -1,0 +1,7 @@
+<map id="loadConfig" name="loadConfig">
+<area shape="rect" id="Node000001" title="Load persisted configuration from NVS into appConfig." alt="" coords="107,29,190,56"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="166,14,161,10,148,8,137,10,131,14,129,20,132,30,127,28,124,20,126,11,135,5,148,3,163,5,172,15"/>
+<area shape="rect" id="Node000002" href="$main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d" title="Initialize NVS configuration, relays, Wi&#45;Fi failover, mDNS, OTA, Web UI, and MQTT." alt="" coords="5,29,59,56"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="89,43,59,45,59,40,94,42"/>
+<area shape="poly" id="edge3_Node000002_Node000002" title=" " alt="" coords="50,14,44,10,32,8,21,10,14,14,13,20,16,28,11,29,8,20,10,11,18,5,32,3,47,5,55,14"/>
+</map>

@@ -1,0 +1,22 @@
+<map id="handleButtons" name="handleButtons">
+<area shape="rect" id="Node000001" title="Poll physical buttons with software debouncing." alt="" coords="5,67,110,93"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="27,67,22,58,26,48,38,42,58,40,78,43,91,51,86,52,77,48,57,45,39,47,30,52,28,57,32,66"/>
+<area shape="rect" id="Node000002" href="$group__relays.html#gabdc28eba4b1755a00dd0902819774c54" title="Smart master toggle: turn all OFF if any relay is ON, otherwise turn all ON." alt="" coords="158,67,306,93"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="109,77,144,79,140,81,111,83"/>
+<area shape="poly" id="edge13_Node000002_Node000002" title=" " alt="" coords="202,66,197,58,201,48,213,42,232,40,252,43,265,51,259,51,251,48,232,45,214,47,205,52,203,57,207,67"/>
+<area shape="rect" id="Node000003" href="$group__relays.html#ga633ffc83b64a9caf1166dcd5cc345986" title="Set all relays to the same state in a single batch." alt="" coords="354,67,449,93"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="306,77,341,80,336,80,307,83"/>
+<area shape="poly" id="edge6_Node000003_Node000003" title=" " alt="" coords="376,65,371,58,374,48,385,42,402,40,420,43,431,52,425,51,418,48,402,45,387,47,379,52,377,57,381,67"/>
+<area shape="rect" id="Node000004" href="$relays_8cpp.html#a9cfb1378655154eed8cc8a6ce38d3047" title=" " alt="" coords="497,29,603,56"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="449,65,480,60,485,59,451,71"/>
+<area shape="rect" id="Node000005" href="$relays_8cpp.html#ab1e7ade513db2c1075cf0c37eb32c58c" title=" " alt="" coords="502,104,598,131"/>
+<area shape="poly" id="edge7_Node000003_Node000005" title=" " alt="" coords="450,89,490,102,484,101,450,95"/>
+<area shape="poly" id="edge5_Node000004_Node000004" title=" " alt="" coords="524,28,520,21,523,11,533,5,550,3,568,5,579,14,574,14,566,10,550,8,535,10,527,14,525,20,529,30"/>
+<area shape="poly" id="edge12_Node000005_Node000005" title=" " alt="" coords="524,102,520,95,523,86,533,80,550,77,568,80,579,89,574,88,566,85,550,83,535,85,527,89,525,95,529,105"/>
+<area shape="rect" id="Node000006" href="$relays_8cpp.html#a1e50f221535f81bfe7b471ecbc94b285" title=" " alt="" coords="651,67,766,93"/>
+<area shape="poly" id="edge8_Node000005_Node000006" title=" " alt="" coords="598,104,634,97,639,96,599,109"/>
+<area shape="rect" id="Node000007" href="$group__config.html#ga5dcd56d2e824768c1a2809ba0090f7bf" title="Persist the 8&#45;bit relay state bitmask to NVS only when it has changed." alt="" coords="651,141,766,168"/>
+<area shape="poly" id="edge10_Node000005_Node000007" title=" " alt="" coords="598,126,638,138,633,137,598,131"/>
+<area shape="poly" id="edge9_Node000006_Node000006" title=" " alt="" coords="681,65,676,58,679,48,690,42,708,40,728,43,739,52,734,51,726,48,708,45,692,47,683,52,681,57,686,67"/>
+<area shape="poly" id="edge11_Node000007_Node000007" title=" " alt="" coords="681,140,676,133,679,123,690,117,708,115,728,117,739,127,734,125,726,122,708,120,692,122,683,127,681,132,686,142"/>
+</map>

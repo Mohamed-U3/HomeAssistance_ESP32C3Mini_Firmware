@@ -1,0 +1,13 @@
+<map id="stopWebUi" name="stopWebUi">
+<area shape="rect" id="Node000001" title="Stop HTTP and WebSocket servers cleanly before entering AP portal mode." alt="" coords="276,67,361,93"/>
+<area shape="poly" id="edge7_Node000001_Node000001" title=" " alt="" coords="343,51,335,48,319,45,303,47,295,52,293,57,297,67,292,65,288,58,291,48,302,42,319,40,337,43,348,52"/>
+<area shape="rect" id="Node000002" href="$main_8cpp.html#a38ae8e1dfae8064f08254147ed5f84b3" title="Gracefully stop network services, open the SoftAP Config Portal, and restart." alt="" coords="107,67,228,93"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="258,80,229,83,228,77,263,80"/>
+<area shape="poly" id="edge4_Node000002_Node000002" title=" " alt="" coords="189,51,182,48,167,45,154,47,146,52,145,58,148,67,143,65,139,58,142,49,152,42,167,40,184,43,194,52"/>
+<area shape="rect" id="Node000003" href="$main_8cpp.html#afe461d27b9c48d5921c00d521181f12f" title="Service Web UI, OTA, MQTT, physical buttons, and the 2&#45;minute Wi&#45;Fi loss watchdog." alt="" coords="9,29,55,56"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="100,64,55,51,55,46,104,60"/>
+<area shape="rect" id="Node000004" href="$main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d" title="Initialize NVS configuration, relays, Wi&#45;Fi failover, mDNS, OTA, Web UI, and MQTT." alt="" coords="5,104,59,131"/>
+<area shape="poly" id="edge5_Node000002_Node000004" title=" " alt="" coords="100,99,60,113,59,107,105,97"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="53,15,47,10,32,8,18,10,11,14,9,20,13,28,8,29,4,21,7,11,16,5,32,3,49,5,58,13"/>
+<area shape="poly" id="edge6_Node000004_Node000004" title=" " alt="" coords="53,89,47,85,32,83,18,85,11,89,9,95,13,103,8,104,4,95,7,86,16,80,32,77,49,80,59,88"/>
+</map>

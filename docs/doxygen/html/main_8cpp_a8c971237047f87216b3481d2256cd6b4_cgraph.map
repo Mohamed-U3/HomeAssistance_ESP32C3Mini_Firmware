@@ -1,0 +1,13 @@
+<map id="setupArduinoOta" name="setupArduinoOta">
+<area shape="rect" id="Node000001" title="Configure and start network OTA updates via ArduinoOTA." alt="" coords="5,67,124,93"/>
+<area shape="poly" id="edge7_Node000001_Node000001" title=" " alt="" coords="35,67,30,58,34,48,45,42,65,40,85,43,97,51,92,52,83,48,64,45,47,47,38,52,35,57,40,66"/>
+<area shape="rect" id="Node000002" href="$group__mqtt.html#ga7e516b30f4e08cb220185f00104c5970" title="Publish retained LWT &quot;offline&quot; status, pause probing, and disconnect cleanly." alt="" coords="172,67,297,93"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="124,77,159,79,154,81,125,83"/>
+<area shape="poly" id="edge6_Node000002_Node000002" title=" " alt="" coords="205,65,200,58,203,48,215,42,234,40,255,43,267,52,262,51,253,48,234,45,217,47,207,52,205,57,210,67"/>
+<area shape="rect" id="Node000003" href="$mqtt__ha_8cpp.html#a69d23664e107e2f2fc3059e7e3991a76" title=" " alt="" coords="345,29,478,56"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="297,64,333,59,328,60,298,69"/>
+<area shape="rect" id="Node000004" href="$mqtt__ha_8cpp.html#a375d83b3284dbf9d108936eaed2e6c63" title=" " alt="" coords="371,104,452,131"/>
+<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="297,91,358,106,353,106,297,96"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="381,28,376,21,380,11,392,5,412,3,433,5,446,14,440,14,431,10,412,8,393,10,383,15,381,20,386,30"/>
+<area shape="poly" id="edge5_Node000004_Node000004" title=" " alt="" coords="381,102,376,95,380,86,392,79,412,77,433,80,446,89,440,88,431,85,412,83,393,85,383,89,381,95,386,105"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="handleWebUi" name="handleWebUi">
+<area shape="rect" id="Node000001" title="Service pending HTTP requests, WebSocket traffic, delayed actions, and status pushes." alt="" coords="99,29,197,56"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="166,14,161,10,148,8,136,10,130,14,128,20,131,30,126,28,123,20,125,11,134,5,148,3,163,5,172,15"/>
+<area shape="rect" id="Node000002" href="$main_8cpp.html#afe461d27b9c48d5921c00d521181f12f" title="Service Web UI, OTA, MQTT, physical buttons, and the 2&#45;minute Wi&#45;Fi loss watchdog." alt="" coords="5,29,51,56"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="81,44,51,45,51,40,86,42"/>
+<area shape="poly" id="edge3_Node000002_Node000002" title=" " alt="" coords="47,15,41,10,28,8,16,10,10,14,8,20,12,28,6,29,3,20,5,11,14,5,28,3,43,5,52,14"/>
+</map>

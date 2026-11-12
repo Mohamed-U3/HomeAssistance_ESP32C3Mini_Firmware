@@ -1,0 +1,7 @@
+<map id="checkAuth" name="checkAuth">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,29,89,56"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="26,29,22,20,25,11,33,5,47,3,62,5,71,14,65,14,60,10,47,8,35,10,29,14,28,20,31,29"/>
+<area shape="rect" id="Node000002" href="$web__ui_8cpp.html#a62d2d61025124223ffdbddb8e63cc53b" title=" " alt="" coords="137,29,194,56"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="89,40,124,42,118,43,89,45"/>
+<area shape="poly" id="edge3_Node000002_Node000002" title=" " alt="" coords="144,28,141,20,143,11,152,5,165,3,180,5,189,15,184,14,178,10,165,8,154,10,147,14,146,20,149,30"/>
+</map>

@@ -1,0 +1,13 @@
+<map id="loadConfig" name="loadConfig">
+<area shape="rect" id="Node000001" title="Load persisted configuration from NVS into appConfig." alt="" coords="5,104,89,131"/>
+<area shape="poly" id="edge3_Node000001_Node000001" title=" " alt="" coords="19,104,14,95,18,86,29,80,47,77,66,80,78,88,73,90,65,85,47,83,30,85,22,89,20,95,24,103"/>
+<area shape="rect" id="Node000002" href="$config_8cpp.html#a47d9ff48fb2c32cdba69fcdd53ff70cb" title=" " alt="" coords="137,29,279,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="69,101,136,66,153,61,148,64,138,70,72,106"/>
+<area shape="rect" id="Node000003" href="$group__config.html#gaca260bb70c6624380e4754f279f35df8" title="Sanitize a hostname in&#45;place to [a&#45;zA&#45;Z0&#45;9&#45;] with fallback to DEFAULT_HOSTNAME." alt="" coords="145,104,271,131"/>
+<area shape="poly" id="edge4_Node000001_Node000003" title=" " alt="" coords="88,115,132,116,127,119,90,120"/>
+<area shape="rect" id="Node000004" href="$config_8cpp.html#ac251cd125b50d17e9d1740356cc99dd2" title=" " alt="" coords="163,179,253,205"/>
+<area shape="poly" id="edge6_Node000001_Node000004" title=" " alt="" coords="78,129,166,170,161,173,77,134"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="180,29,175,21,178,11,190,5,208,3,227,5,239,14,234,14,225,10,208,8,191,10,182,15,180,20,185,29"/>
+<area shape="poly" id="edge5_Node000003_Node000003" title=" " alt="" coords="180,103,175,95,178,86,190,80,208,77,227,80,239,89,234,89,225,85,208,83,191,85,182,89,180,95,185,104"/>
+<area shape="poly" id="edge7_Node000004_Node000004" title=" " alt="" coords="180,177,175,170,178,160,190,154,208,152,227,155,239,164,234,163,225,160,208,157,191,159,182,164,180,169,185,179"/>
+</map>

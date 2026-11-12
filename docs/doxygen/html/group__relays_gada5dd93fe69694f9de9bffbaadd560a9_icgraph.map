@@ -1,0 +1,7 @@
+<map id="setRelayCallbacks" name="setRelayCallbacks">
+<area shape="rect" id="Node000001" title="Register callbacks notified whenever relay states change." alt="" coords="107,29,238,56"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="195,14,188,10,172,8,158,10,151,14,149,20,152,30,148,28,143,21,146,11,156,5,172,3,190,5,200,15"/>
+<area shape="rect" id="Node000002" href="$main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d" title="Initialize NVS configuration, relays, Wi&#45;Fi failover, mDNS, OTA, Web UI, and MQTT." alt="" coords="5,29,59,56"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="88,43,59,45,59,40,93,42"/>
+<area shape="poly" id="edge3_Node000002_Node000002" title=" " alt="" coords="54,15,47,10,32,8,18,10,10,14,8,20,12,28,7,30,3,21,6,11,16,5,32,3,49,5,59,14"/>
+</map>

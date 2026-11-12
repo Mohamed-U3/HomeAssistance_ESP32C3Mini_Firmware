@@ -1,0 +1,34 @@
+<map id="ensureWifiConnected" name="ensureWifiConnected">
+<area shape="rect" id="Node000001" title="Ensure Wi&#45;Fi connectivity at boot using a resilient search&#45;and&#45;portal cycle." alt="" coords="5,105,152,132"/>
+<area shape="poly" id="edge7_Node000001_Node000001" title=" " alt="" coords="47,105,41,97,45,87,58,81,79,79,101,81,114,89,109,91,99,86,78,84,59,86,49,91,47,96,52,104"/>
+<area shape="rect" id="Node000002" href="$group__config.html#gae8f033c18f4b2de9f04696a851f18dcd" title="Search and retry connecting to the saved Wi&#45;Fi SSID for up to timeoutMs." alt="" coords="200,29,327,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="112,103,216,60,213,65,115,107"/>
+<area shape="rect" id="Node000003" href="$group__config.html#gaa8998deebebade674248ea8b1b02aabf" title="Check whether STA Wi&#45;Fi credentials are stored in ESP32 NVS." alt="" coords="375,80,477,107"/>
+<area shape="poly" id="edge9_Node000001_Node000003" title=" " alt="" coords="151,111,361,96,358,100,153,116"/>
+<area shape="rect" id="Node000004" href="$group__config.html#ga61c98e3e350fde118c109f2a253d91bf" title="Read the stored STA SSID from ESP32 Wi&#45;Fi NVS configuration." alt="" coords="534,97,659,124"/>
+<area shape="poly" id="edge8_Node000001_Node000004" title=" " alt="" coords="151,118,302,119,477,116,521,116,516,117,477,121,302,124,153,123"/>
+<area shape="rect" id="Node000005" href="$group__config.html#ga78114f5ff57287d0e39f5a59962afb80" title="Start the SoftAP configuration portal for up to timeoutSec seconds." alt="" coords="208,231,319,257"/>
+<area shape="poly" id="edge10_Node000001_Node000005" title=" " alt="" coords="101,130,232,220,227,223,99,135"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="235,29,230,21,234,11,245,5,263,3,283,5,295,14,289,15,281,10,263,8,247,10,238,15,236,20,240,29"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="308,54,369,74,364,76,309,59"/>
+<area shape="poly" id="edge6_Node000003_Node000003" title=" " alt="" coords="398,79,393,71,396,62,408,56,426,53,446,56,458,65,452,65,444,61,426,59,409,61,400,65,398,71,403,80"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="477,96,521,102,516,103,478,101"/>
+<area shape="poly" id="edge5_Node000004_Node000004" title=" " alt="" coords="567,96,562,89,566,79,577,73,597,71,617,73,629,82,624,82,615,78,596,76,579,78,570,83,567,88,572,98"/>
+<area shape="poly" id="edge15_Node000005_Node000005" title=" " alt="" coords="235,230,230,222,234,212,245,206,263,204,283,207,295,215,289,215,281,212,263,209,247,211,238,216,236,221,240,231"/>
+<area shape="rect" id="Node000006" href="$config_8cpp.html#a47d9ff48fb2c32cdba69fcdd53ff70cb" title=" " alt="" coords="525,188,668,215"/>
+<area shape="poly" id="edge11_Node000005_Node000006" title=" " alt="" coords="319,228,375,217,512,205,507,207,375,223,320,233"/>
+<area shape="rect" id="Node000007" href="$group__config.html#gaf857f35623b29612a3b4cc45dd6fff23" title="Build the runtime SoftAP SSID from the configured hostname (ESP32&#45;&lt;hostname&gt;&#45;AP)." alt="" coords="386,256,467,283"/>
+<area shape="poly" id="edge13_Node000005_Node000007" title=" " alt="" coords="319,250,373,260,367,261,319,255"/>
+<area shape="rect" id="Node000008" href="$group__config.html#ga688d00bbabd28fbaf9e0c50eca3adeae" title="Validate and persist appConfig fields to NVS." alt="" coords="382,331,470,357"/>
+<area shape="poly" id="edge16_Node000005_Node000008" title=" " alt="" coords="288,255,393,322,387,322,286,260"/>
+<area shape="poly" id="edge12_Node000006_Node000006" title=" " alt="" coords="567,187,562,179,566,170,577,164,597,161,617,164,629,173,624,172,615,169,596,167,579,169,570,173,567,179,572,188"/>
+<area shape="poly" id="edge14_Node000007_Node000007" title=" " alt="" coords="398,255,393,247,396,238,408,232,426,229,446,232,458,241,452,240,444,237,426,235,409,237,400,241,398,247,403,257"/>
+<area shape="poly" id="edge17_Node000008_Node000006" title=" " alt="" coords="441,328,475,293,497,260,507,246,524,230,538,223,543,221,527,234,511,249,502,263,479,296,444,333"/>
+<area shape="poly" id="edge22_Node000008_Node000008" title=" " alt="" coords="398,329,393,322,396,312,408,306,426,304,446,307,458,316,452,315,444,312,426,309,409,311,400,316,398,321,403,331"/>
+<area shape="rect" id="Node000009" href="$group__config.html#gaca260bb70c6624380e4754f279f35df8" title="Sanitize a hostname in&#45;place to [a&#45;zA&#45;Z0&#45;9&#45;] with fallback to DEFAULT_HOSTNAME." alt="" coords="533,268,660,295"/>
+<area shape="poly" id="edge18_Node000008_Node000009" title=" " alt="" coords="463,327,524,304,540,301,545,300,526,309,464,333"/>
+<area shape="rect" id="Node000010" href="$config_8cpp.html#ac251cd125b50d17e9d1740356cc99dd2" title=" " alt="" coords="551,343,642,369"/>
+<area shape="poly" id="edge20_Node000008_Node000010" title=" " alt="" coords="470,344,538,352,533,352,470,350"/>
+<area shape="poly" id="edge19_Node000009_Node000009" title=" " alt="" coords="567,266,562,259,566,250,577,244,597,241,617,244,629,253,624,252,615,249,596,247,579,249,570,253,567,259,572,269"/>
+<area shape="poly" id="edge21_Node000010_Node000010" title=" " alt="" coords="567,341,562,334,566,324,577,318,597,316,617,319,629,328,624,327,615,324,596,321,579,323,570,328,567,333,572,343"/>
+</map>

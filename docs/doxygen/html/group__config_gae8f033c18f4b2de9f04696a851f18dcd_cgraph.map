@@ -1,0 +1,10 @@
+<map id="connectSavedWifi" name="connectSavedWifi">
+<area shape="rect" id="Node000001" title="Search and retry connecting to the saved Wi&#45;Fi SSID for up to timeoutMs." alt="" coords="5,29,133,56"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="40,29,36,21,39,11,51,5,69,3,89,5,100,14,95,14,87,10,69,8,52,10,43,15,41,20,46,29"/>
+<area shape="rect" id="Node000002" href="$group__config.html#gaa8998deebebade674248ea8b1b02aabf" title="Check whether STA Wi&#45;Fi credentials are stored in ESP32 NVS." alt="" coords="181,29,283,56"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="133,40,168,42,162,43,133,45"/>
+<area shape="poly" id="edge5_Node000002_Node000002" title=" " alt="" coords="204,28,199,21,202,11,214,5,232,3,251,5,263,15,258,14,250,10,232,8,215,10,206,15,204,20,209,30"/>
+<area shape="rect" id="Node000003" href="$group__config.html#ga61c98e3e350fde118c109f2a253d91bf" title="Read the stored STA SSID from ESP32 Wi&#45;Fi NVS configuration." alt="" coords="331,29,456,56"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="283,40,318,43,313,43,284,45"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="366,28,361,21,364,11,375,5,394,3,413,5,425,15,420,14,411,10,394,8,377,10,368,15,366,20,370,30"/>
+</map>

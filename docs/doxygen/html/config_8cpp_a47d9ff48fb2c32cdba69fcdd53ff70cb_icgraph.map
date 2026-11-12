@@ -1,0 +1,38 @@
+<map id="clampPowerOnMode" name="clampPowerOnMode">
+<area shape="rect" id="Node000001" title=" " alt="" coords="654,139,796,165"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="756,123,746,120,725,117,706,119,695,124,693,129,698,139,693,137,688,130,691,120,704,114,725,112,748,115,761,124"/>
+<area shape="rect" id="Node000002" href="$group__config.html#gad5ed6ddd9940c0097cc91774056df1c2" title="Load persisted configuration from NVS into appConfig." alt="" coords="321,104,404,131"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="636,143,606,143,405,124,404,118,606,137,641,143"/>
+<area shape="rect" id="Node000004" href="$group__config.html#ga78114f5ff57287d0e39f5a59962afb80" title="Start the SoftAP configuration portal for up to timeoutSec seconds." alt="" coords="307,224,418,251"/>
+<area shape="poly" id="edge6_Node000001_Node000004" title=" " alt="" coords="694,173,653,199,607,217,558,229,508,236,419,241,418,236,507,231,557,224,605,212,650,194,689,175"/>
+<area shape="rect" id="Node000008" href="$group__config.html#ga688d00bbabd28fbaf9e0c50eca3adeae" title="Validate and persist appConfig fields to NVS." alt="" coords="495,176,582,203"/>
+<area shape="poly" id="edge16_Node000001_Node000008" title=" " alt="" coords="643,168,583,183,582,178,638,169"/>
+<area shape="rect" id="Node000009" href="$group__config.html#gad4b1346473d99636d198af44479ebe58" title="Persist the relay power&#45;on mode (0=OFF, 1=ON, 2=Restore) to NVS." alt="" coords="471,41,606,68"/>
+<area shape="poly" id="edge19_Node000001_Node000009" title=" " alt="" coords="681,131,565,71,567,66,687,131"/>
+<area shape="poly" id="edge3_Node000002_Node000002" title=" " alt="" coords="391,89,382,85,362,83,344,85,335,89,332,95,337,104,332,103,327,95,331,86,343,79,363,77,384,80,396,89"/>
+<area shape="rect" id="Node000003" href="$main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d" title="Initialize NVS configuration, relays, Wi&#45;Fi failover, mDNS, OTA, Web UI, and MQTT." alt="" coords="7,124,60,151"/>
+<area shape="poly" id="edge4_Node000002_Node000003" title=" " alt="" coords="303,118,213,121,108,128,62,135,59,130,108,123,213,116,308,116"/>
+<area shape="poly" id="edge5_Node000003_Node000003" title=" " alt="" coords="57,110,49,105,33,103,18,105,10,109,8,115,12,123,7,124,3,115,6,106,17,100,33,97,51,100,62,108"/>
+<area shape="poly" id="edge15_Node000004_Node000004" title=" " alt="" coords="391,208,382,205,362,203,344,205,335,209,332,215,337,225,332,222,327,215,331,206,343,199,363,197,384,200,396,209"/>
+<area shape="rect" id="Node000005" href="$group__config.html#ga98066adaeb8cb096485d48e91c27e50e" title="Ensure Wi&#45;Fi connectivity at boot using a resilient search&#45;and&#45;portal cycle." alt="" coords="108,161,254,188"/>
+<area shape="poly" id="edge7_Node000004_Node000005" title=" " alt="" coords="305,219,222,191,222,186,310,218"/>
+<area shape="rect" id="Node000006" href="$main_8cpp.html#a38ae8e1dfae8064f08254147ed5f84b3" title="Gracefully stop network services, open the SoftAP Config Portal, and restart." alt="" coords="120,236,242,263"/>
+<area shape="poly" id="edge10_Node000004_Node000006" title=" " alt="" coords="289,242,243,248,242,243,294,242"/>
+<area shape="poly" id="edge9_Node000005_Node000003" title=" " alt="" coords="109,159,61,147,60,141,113,155"/>
+<area shape="poly" id="edge8_Node000005_Node000005" title=" " alt="" coords="205,146,197,142,181,140,166,142,158,146,156,152,160,161,155,160,151,153,154,143,164,137,181,135,199,137,210,146"/>
+<area shape="poly" id="edge14_Node000006_Node000003" title=" " alt="" coords="144,228,106,202,49,154,51,149,110,198,149,227"/>
+<area shape="poly" id="edge13_Node000006_Node000006" title=" " alt="" coords="205,220,197,217,181,215,166,217,158,221,156,227,160,237,155,234,151,227,154,218,164,212,181,209,199,212,210,221"/>
+<area shape="rect" id="Node000007" href="$main_8cpp.html#afe461d27b9c48d5921c00d521181f12f" title="Service Web UI, OTA, MQTT, physical buttons, and the 2&#45;minute Wi&#45;Fi loss watchdog." alt="" coords="11,236,56,263"/>
+<area shape="poly" id="edge11_Node000006_Node000007" title=" " alt="" coords="103,251,57,252,56,247,107,248"/>
+<area shape="poly" id="edge12_Node000007_Node000007" title=" " alt="" coords="57,221,50,217,33,215,18,217,10,221,8,227,13,235,8,237,3,228,6,218,16,212,33,209,52,212,62,220"/>
+<area shape="poly" id="edge17_Node000008_Node000004" title=" " alt="" coords="483,205,415,226,414,221,477,206"/>
+<area shape="poly" id="edge18_Node000008_Node000008" title=" " alt="" coords="567,160,558,157,538,155,520,157,510,161,508,167,513,177,508,174,503,167,506,158,519,151,538,149,559,152,572,161"/>
+<area shape="poly" id="edge20_Node000009_Node000009" title=" " alt="" coords="567,26,558,22,538,20,520,22,510,27,508,32,513,42,508,40,503,33,506,23,519,17,538,15,559,17,572,26"/>
+<area shape="rect" id="Node000010" href="$web__ui_8cpp.html#a1e0488d07821284a93f644a94feb35b3" title=" " alt="" coords="302,29,423,56"/>
+<area shape="poly" id="edge21_Node000009_Node000010" title=" " alt="" coords="452,50,424,49,423,44,458,48"/>
+<area shape="poly" id="edge25_Node000010_Node000010" title=" " alt="" coords="391,14,382,10,362,8,344,10,335,15,332,20,337,29,332,28,327,21,331,11,343,5,363,3,384,5,396,14"/>
+<area shape="rect" id="Node000011" href="$group__webui.html#ga818909dc80498d9c5bb8bda01687a960" title="Start the HTTP server (port 80) and WebSocket server (port 81)." alt="" coords="142,31,220,57"/>
+<area shape="poly" id="edge22_Node000010_Node000011" title=" " alt="" coords="285,44,221,46,220,41,289,42"/>
+<area shape="poly" id="edge24_Node000011_Node000003" title=" " alt="" coords="135,67,109,84,53,125,49,122,107,79,138,63"/>
+<area shape="poly" id="edge23_Node000011_Node000011" title=" " alt="" coords="205,16,197,12,181,9,166,11,158,16,156,22,160,30,155,30,151,22,154,12,164,6,181,4,199,7,210,15"/>
+</map>

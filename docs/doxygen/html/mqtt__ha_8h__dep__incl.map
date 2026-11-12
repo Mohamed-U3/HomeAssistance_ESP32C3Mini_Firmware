@@ -1,0 +1,9 @@
+<map id="src/mqtt_ha.h" name="src/mqtt_ha.h">
+<area shape="rect" id="Node000001" title="Home Assistant MQTT auto&#45;discovery, LWT availability, and non&#45;blocking broker probing." alt="" coords="132,5,234,32"/>
+<area shape="rect" id="Node000002" href="$main_8cpp.html" title="Firmware entry point, ArduinoOTA setup, Wi&#45;Fi watchdog, and main loop orchestration." alt="" coords="5,80,102,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="149,41,77,82,75,77,145,39"/>
+<area shape="rect" id="Node000003" href="$mqtt__ha_8cpp.html" title="Implementation of Home Assistant MQTT discovery, LWT, and FreeRTOS broker probing." alt="" coords="125,80,240,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="185,46,185,81,181,78,181,50"/>
+<area shape="rect" id="Node000004" href="$web__ui_8cpp.html" title="Implementation of the HTTP dashboard, WebSocket server, and browser OTA endpoint." alt="" coords="264,80,374,107"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="221,37,298,79,292,80,219,42"/>
+</map>

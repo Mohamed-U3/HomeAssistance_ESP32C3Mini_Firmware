@@ -1,0 +1,60 @@
+<map id="buildRelayMask" name="buildRelayMask">
+<area shape="rect" id="Node000001" title=" " alt="" coords="1172,155,1286,181"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="1260,139,1250,136,1229,133,1209,135,1198,140,1196,145,1201,155,1196,153,1191,146,1195,136,1208,130,1229,128,1252,131,1265,140"/>
+<area shape="rect" id="Node000002" href="$group__relays.html#ga3805435ce157d4f51650a325f6e31ee2" title="Persist the current 8&#45;relay state bitmask to NVS." alt="" coords="954,155,1124,181"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="1154,168,1124,171,1124,165,1159,168"/>
+<area shape="rect" id="Node000006" href="$group__relays.html#gaf7cbe2f5eeb3494b310d0ea10fcd055d" title="Set a single relay&#39;s state and synchronize GPIO, NVS, MQTT, and WebSocket clients." alt="" coords="814,80,887,107"/>
+<area shape="poly" id="edge10_Node000001_Node000006" title=" " alt="" coords="1189,147,1158,134,1123,121,1059,108,994,100,888,95,887,90,995,95,1060,102,1124,116,1160,129,1194,147"/>
+<area shape="rect" id="Node000010" href="$relays_8cpp.html#ab1e7ade513db2c1075cf0c37eb32c58c" title=" " alt="" coords="991,229,1087,256"/>
+<area shape="poly" id="edge20_Node000001_Node000010" title=" " alt="" coords="1181,187,1076,231,1074,226,1176,188"/>
+<area shape="poly" id="edge3_Node000002_Node000002" title=" " alt="" coords="1070,139,1060,136,1039,133,1019,135,1009,140,1006,145,1011,155,1007,153,1001,146,1005,136,1018,130,1039,128,1062,131,1075,140"/>
+<area shape="rect" id="Node000003" href="$web__ui_8cpp.html#a1e0488d07821284a93f644a94feb35b3" title=" " alt="" coords="416,181,537,208"/>
+<area shape="poly" id="edge4_Node000002_Node000003" title=" " alt="" coords="936,174,538,194,537,189,941,172"/>
+<area shape="poly" id="edge9_Node000003_Node000003" title=" " alt="" coords="501,166,493,162,476,160,461,162,452,167,450,172,454,182,449,180,445,173,448,163,459,157,477,155,495,157,506,166"/>
+<area shape="rect" id="Node000004" href="$group__webui.html#ga818909dc80498d9c5bb8bda01687a960" title="Start the HTTP server (port 80) and WebSocket server (port 81)." alt="" coords="284,168,361,195"/>
+<area shape="poly" id="edge5_Node000003_Node000004" title=" " alt="" coords="399,189,362,187,361,182,404,188"/>
+<area shape="poly" id="edge6_Node000004_Node000004" title=" " alt="" coords="347,153,339,149,322,147,306,149,298,153,296,159,300,168,295,167,291,159,294,150,305,144,322,141,341,144,352,153"/>
+<area shape="rect" id="Node000005" href="$main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d" title="Initialize NVS configuration, relays, Wi&#45;Fi failover, mDNS, OTA, Web UI, and MQTT." alt="" coords="5,187,59,213"/>
+<area shape="poly" id="edge7_Node000004_Node000005" title=" " alt="" coords="267,187,60,201,58,196,269,182"/>
+<area shape="poly" id="edge8_Node000005_Node000005" title=" " alt="" coords="53,172,47,168,32,165,18,167,11,172,9,178,13,186,8,187,4,178,7,169,16,162,32,160,49,163,58,170"/>
+<area shape="poly" id="edge16_Node000006_Node000006" title=" " alt="" coords="880,65,871,61,850,59,831,61,821,65,818,71,823,80,818,79,813,71,817,62,830,55,850,53,872,56,885,65"/>
+<area shape="rect" id="Node000007" href="$mqtt__ha_8cpp.html#a19cd0c12d2e6eda317fc681281f2ce3a" title=" " alt="" coords="616,29,714,56"/>
+<area shape="poly" id="edge11_Node000006_Node000007" title=" " alt="" coords="796,80,715,59,715,53,801,79"/>
+<area shape="rect" id="Node000009" href="$group__relays.html#ga607bf5f8f430bdca13979ba385f0dc7d" title="Toggle a single relay identified by its ESP32&#45;C3 GPIO pin number." alt="" coords="585,104,746,131"/>
+<area shape="poly" id="edge17_Node000006_Node000009" title=" " alt="" coords="795,101,747,109,746,104,800,99"/>
+<area shape="poly" id="edge15_Node000007_Node000007" title=" " alt="" coords="695,14,686,10,665,8,646,10,636,15,633,20,639,30,633,28,628,21,632,11,645,5,665,3,687,5,701,14"/>
+<area shape="rect" id="Node000008" href="$group__mqtt.html#gaf9ea729a7f735bc6cce0c4d9f260e3f2" title="Initialize MQTT client settings and spawn the FreeRTOS background probe task." alt="" coords="135,104,200,131"/>
+<area shape="poly" id="edge12_Node000007_Node000008" title=" " alt="" coords="600,55,200,115,199,110,601,50"/>
+<area shape="poly" id="edge14_Node000008_Node000005" title=" " alt="" coords="130,141,58,188,54,184,132,136"/>
+<area shape="poly" id="edge13_Node000008_Node000008" title=" " alt="" coords="189,89,182,85,167,83,154,85,146,89,145,95,148,104,143,104,139,95,142,86,152,80,167,77,184,80,194,88"/>
+<area shape="poly" id="edge19_Node000009_Node000003" title=" " alt="" coords="618,136,586,152,511,183,509,178,584,147,613,138"/>
+<area shape="poly" id="edge18_Node000009_Node000009" title=" " alt="" coords="695,89,686,85,665,83,646,85,636,89,633,95,639,104,633,103,628,95,632,86,645,79,665,77,687,80,701,89"/>
+<area shape="poly" id="edge38_Node000010_Node000010" title=" " alt="" coords="1070,214,1060,210,1039,208,1019,210,1009,215,1006,220,1011,230,1007,228,1001,221,1005,211,1018,205,1039,203,1062,205,1075,215"/>
+<area shape="rect" id="Node000011" href="$group__relays.html#ga633ffc83b64a9caf1166dcd5cc345986" title="Set all relays to the same state in a single batch." alt="" coords="802,304,898,331"/>
+<area shape="poly" id="edge21_Node000010_Node000011" title=" " alt="" coords="992,262,887,306,885,301,986,263"/>
+<area shape="rect" id="Node000017" href="$group__relays.html#ga7f4867da690e0cdc775b3767ace0e944" title="Invert the state of every relay channel in a single batch." alt="" coords="794,229,906,256"/>
+<area shape="poly" id="edge39_Node000010_Node000017" title=" " alt="" coords="973,243,907,245,907,240,978,242"/>
+<area shape="poly" id="edge37_Node000011_Node000003" title=" " alt="" coords="786,299,584,236,515,211,516,206,586,231,792,299"/>
+<area shape="poly" id="edge22_Node000011_Node000011" title=" " alt="" coords="880,288,871,285,850,283,831,285,821,289,818,295,823,305,818,302,813,295,817,286,830,279,850,277,872,280,885,289"/>
+<area shape="rect" id="Node000012" href="$group__relays.html#gabdc28eba4b1755a00dd0902819774c54" title="Smart master toggle: turn all OFF if any relay is ON, otherwise turn all ON." alt="" coords="591,331,740,357"/>
+<area shape="poly" id="edge23_Node000011_Node000012" title=" " alt="" coords="789,326,740,336,740,331,784,327"/>
+<area shape="poly" id="edge36_Node000012_Node000003" title=" " alt="" coords="628,321,583,290,492,211,494,206,586,286,634,322"/>
+<area shape="poly" id="edge35_Node000012_Node000012" title=" " alt="" coords="695,315,686,312,665,309,646,311,636,316,633,321,638,331,634,329,628,322,632,312,645,306,665,304,687,307,701,316"/>
+<area shape="rect" id="Node000013" href="$group__relays.html#ga1583a5cd071b0df65d66ca83d0cd065c" title="Poll physical buttons with software debouncing." alt="" coords="424,331,529,357"/>
+<area shape="poly" id="edge24_Node000012_Node000013" title=" " alt="" coords="573,344,529,347,529,341,578,344"/>
+<area shape="poly" id="edge25_Node000013_Node000013" title=" " alt="" coords="501,315,493,312,476,309,461,311,452,316,450,321,454,331,450,329,445,322,448,312,459,306,477,304,495,307,506,316"/>
+<area shape="rect" id="Node000014" href="$main_8cpp.html#afe461d27b9c48d5921c00d521181f12f" title="Service Web UI, OTA, MQTT, physical buttons, and the 2&#45;minute Wi&#45;Fi loss watchdog." alt="" coords="9,312,55,339"/>
+<area shape="poly" id="edge26_Node000013_Node000014" title=" " alt="" coords="409,344,55,329,55,324,409,339"/>
+<area shape="rect" id="Node000015" href="$main_8cpp.html#a01939620b305005d0e0e011f1b9fcd63" title="Tick handler passed into Wi&#45;Fi search and portal loops to keep physical buttons active." alt="" coords="276,287,368,313"/>
+<area shape="poly" id="edge28_Node000013_Node000015" title=" " alt="" coords="410,326,368,316,369,310,415,326"/>
+<area shape="poly" id="edge27_Node000014_Node000014" title=" " alt="" coords="53,297,47,293,32,291,18,293,11,297,9,303,13,311,8,312,4,303,7,294,16,288,32,285,49,288,59,296"/>
+<area shape="poly" id="edge33_Node000015_Node000005" title=" " alt="" coords="282,279,227,253,135,224,60,207,59,202,136,219,229,248,288,278"/>
+<area shape="poly" id="edge34_Node000015_Node000015" title=" " alt="" coords="347,271,339,268,322,265,306,267,298,272,296,277,300,287,295,285,291,278,294,268,305,262,322,260,341,263,352,272"/>
+<area shape="rect" id="Node000016" href="$main_8cpp.html#a38ae8e1dfae8064f08254147ed5f84b3" title="Gracefully stop network services, open the SoftAP Config Portal, and restart." alt="" coords="107,287,228,313"/>
+<area shape="poly" id="edge29_Node000015_Node000016" title=" " alt="" coords="258,300,228,303,228,297,263,300"/>
+<area shape="poly" id="edge32_Node000016_Node000005" title=" " alt="" coords="133,278,51,216,52,211,138,276"/>
+<area shape="poly" id="edge30_Node000016_Node000014" title=" " alt="" coords="89,316,56,324,55,319,93,313"/>
+<area shape="poly" id="edge31_Node000016_Node000016" title=" " alt="" coords="189,271,182,268,167,265,154,267,146,272,145,278,148,287,143,285,139,278,142,269,152,262,167,260,184,263,194,272"/>
+<area shape="poly" id="edge41_Node000017_Node000003" title=" " alt="" coords="776,234,537,205,537,200,781,233"/>
+<area shape="poly" id="edge40_Node000017_Node000017" title=" " alt="" coords="880,214,871,210,850,208,831,210,821,215,818,220,823,230,818,228,813,221,817,211,830,205,850,203,872,205,885,215"/>
+</map>

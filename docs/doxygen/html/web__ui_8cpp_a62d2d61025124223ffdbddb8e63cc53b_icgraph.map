@@ -1,0 +1,28 @@
+<map id="server" name="server">
+<area shape="rect" id="Node000001" title=" " alt="" coords="409,117,467,144"/>
+<area shape="poly" id="edge12_Node000001_Node000001" title=" " alt="" coords="456,102,451,98,438,96,426,98,420,102,418,108,421,118,417,116,413,108,416,99,424,93,438,91,453,93,462,103"/>
+<area shape="rect" id="Node000002" href="$web__ui_8cpp.html#a86cd8551986867e4bac7488cb687b44f" title=" " alt="" coords="277,29,360,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="404,108,338,59,339,54,409,108"/>
+<area shape="rect" id="Node000003" href="$group__webui.html#ga818909dc80498d9c5bb8bda01687a960" title="Start the HTTP server (port 80) and WebSocket server (port 81)." alt="" coords="129,73,206,100"/>
+<area shape="poly" id="edge11_Node000001_Node000003" title=" " alt="" coords="392,125,206,96,206,90,396,122"/>
+<area shape="rect" id="Node000005" href="$group__webui.html#ga6197e94218f5f0febc0a35e777fb3475" title="Service pending HTTP requests, WebSocket traffic, delayed actions, and status pushes." alt="" coords="118,223,216,249"/>
+<area shape="poly" id="edge7_Node000001_Node000005" title=" " alt="" coords="416,154,391,178,363,196,326,211,288,222,217,234,217,229,286,216,324,206,360,191,388,173,411,156"/>
+<area shape="rect" id="Node000007" href="$group__webui.html#gacdf394c89a00dda51926543f54040466" title="Stop HTTP and WebSocket servers cleanly before entering AP portal mode." alt="" coords="276,155,361,181"/>
+<area shape="poly" id="edge13_Node000001_Node000007" title=" " alt="" coords="397,143,362,157,361,152,392,145"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="337,14,331,10,319,8,307,10,301,14,299,20,302,30,297,28,294,20,296,11,305,5,319,3,334,5,342,14"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="260,60,207,78,205,73,264,58"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="189,58,182,54,167,52,154,54,146,58,145,64,148,73,143,73,139,65,142,55,152,49,167,47,184,49,194,58"/>
+<area shape="rect" id="Node000004" href="$main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d" title="Initialize NVS configuration, relays, Wi&#45;Fi failover, mDNS, OTA, Web UI, and MQTT." alt="" coords="5,92,59,119"/>
+<area shape="poly" id="edge5_Node000003_Node000004" title=" " alt="" coords="111,96,61,104,58,99,115,92"/>
+<area shape="poly" id="edge6_Node000004_Node000004" title=" " alt="" coords="53,78,47,73,32,71,18,73,11,77,9,83,13,91,8,92,4,83,7,74,16,68,32,65,49,68,58,76"/>
+<area shape="poly" id="edge8_Node000005_Node000005" title=" " alt="" coords="189,207,182,204,167,201,154,203,146,208,145,214,148,223,143,221,139,214,142,205,152,198,167,196,184,199,194,208"/>
+<area shape="rect" id="Node000006" href="$main_8cpp.html#afe461d27b9c48d5921c00d521181f12f" title="Service Web UI, OTA, MQTT, physical buttons, and the 2&#45;minute Wi&#45;Fi loss watchdog." alt="" coords="9,185,55,212"/>
+<area shape="poly" id="edge9_Node000005_Node000006" title=" " alt="" coords="101,220,55,207,55,202,105,217"/>
+<area shape="poly" id="edge10_Node000006_Node000006" title=" " alt="" coords="53,171,47,166,32,164,18,166,11,170,9,176,13,184,8,185,4,177,7,167,16,161,32,159,49,161,58,169"/>
+<area shape="poly" id="edge18_Node000007_Node000007" title=" " alt="" coords="337,139,331,136,319,133,307,135,301,140,299,146,302,155,297,153,294,146,296,137,305,130,319,128,334,131,342,140"/>
+<area shape="rect" id="Node000008" href="$main_8cpp.html#a38ae8e1dfae8064f08254147ed5f84b3" title="Gracefully stop network services, open the SoftAP Config Portal, and restart." alt="" coords="107,148,228,175"/>
+<area shape="poly" id="edge14_Node000007_Node000008" title=" " alt="" coords="258,166,229,167,228,161,263,165"/>
+<area shape="poly" id="edge17_Node000008_Node000004" title=" " alt="" coords="117,143,59,119,59,113,121,140"/>
+<area shape="poly" id="edge15_Node000008_Node000006" title=" " alt="" coords="100,181,56,195,54,190,104,177"/>
+<area shape="poly" id="edge16_Node000008_Node000008" title=" " alt="" coords="189,133,182,129,167,127,154,129,146,133,145,139,148,148,143,147,139,139,142,130,152,124,167,121,184,124,194,133"/>
+</map>

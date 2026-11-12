@@ -1,0 +1,13 @@
+<map id="saveConfig" name="saveConfig">
+<area shape="rect" id="Node000001" title="Validate and persist appConfig fields to NVS." alt="" coords="5,104,93,131"/>
+<area shape="poly" id="edge7_Node000001_Node000001" title=" " alt="" coords="21,104,16,95,19,86,31,80,49,77,69,80,80,88,75,90,67,85,49,83,32,85,23,89,21,95,26,103"/>
+<area shape="rect" id="Node000002" href="$config_8cpp.html#a47d9ff48fb2c32cdba69fcdd53ff70cb" title=" " alt="" coords="141,29,283,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="72,101,140,66,157,61,152,64,142,70,75,106"/>
+<area shape="rect" id="Node000003" href="$group__config.html#gaca260bb70c6624380e4754f279f35df8" title="Sanitize a hostname in&#45;place to [a&#45;zA&#45;Z0&#45;9&#45;] with fallback to DEFAULT_HOSTNAME." alt="" coords="149,104,275,131"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="93,115,135,116,131,119,94,120"/>
+<area shape="rect" id="Node000004" href="$config_8cpp.html#ac251cd125b50d17e9d1740356cc99dd2" title=" " alt="" coords="167,179,257,205"/>
+<area shape="poly" id="edge5_Node000001_Node000004" title=" " alt="" coords="81,129,169,170,165,173,79,134"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="183,29,179,21,182,11,194,5,212,3,232,5,243,14,238,14,230,10,212,8,195,10,186,15,184,20,189,29"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="183,103,179,95,182,86,194,80,212,77,232,80,243,89,238,89,230,85,212,83,195,85,186,89,184,95,189,104"/>
+<area shape="poly" id="edge6_Node000004_Node000004" title=" " alt="" coords="184,177,179,170,182,160,194,154,212,152,232,155,243,164,238,163,230,160,212,157,195,159,186,164,184,169,188,179"/>
+</map>

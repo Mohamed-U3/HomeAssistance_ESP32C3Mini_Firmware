@@ -1,0 +1,7 @@
+<map id="hasSavedWifi" name="hasSavedWifi">
+<area shape="rect" id="Node000001" title="Check whether STA Wi&#45;Fi credentials are stored in ESP32 NVS." alt="" coords="5,29,108,56"/>
+<area shape="poly" id="edge3_Node000001_Node000001" title=" " alt="" coords="28,29,24,21,27,11,38,5,57,3,76,5,88,14,82,14,74,10,56,8,40,10,31,15,29,20,33,29"/>
+<area shape="rect" id="Node000002" href="$group__config.html#ga61c98e3e350fde118c109f2a253d91bf" title="Read the stored STA SSID from ESP32 Wi&#45;Fi NVS configuration." alt="" coords="156,29,281,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="108,40,143,42,137,43,108,45"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="190,28,185,21,189,11,200,5,218,3,238,5,250,15,244,14,236,10,218,8,202,10,193,15,191,20,195,30"/>
+</map>

@@ -1,0 +1,10 @@
+<map id="persistCurrentRelayMask" name="persistCurrentRelayMask">
+<area shape="rect" id="Node000001" title="Persist the current 8&#45;relay state bitmask to NVS." alt="" coords="5,67,175,93"/>
+<area shape="poly" id="edge3_Node000001_Node000001" title=" " alt="" coords="57,66,52,58,56,48,69,42,90,40,113,43,126,51,121,52,111,48,90,45,70,47,60,52,57,57,62,66"/>
+<area shape="rect" id="Node000002" href="$relays_8cpp.html#a1e50f221535f81bfe7b471ecbc94b285" title=" " alt="" coords="223,29,338,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="161,64,210,56,205,58,162,69"/>
+<area shape="rect" id="Node000003" href="$group__config.html#ga5dcd56d2e824768c1a2809ba0090f7bf" title="Persist the 8&#45;bit relay state bitmask to NVS only when it has changed." alt="" coords="223,104,338,131"/>
+<area shape="poly" id="edge4_Node000001_Node000003" title=" " alt="" coords="161,91,210,103,205,103,161,97"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="248,28,242,21,246,11,259,5,280,3,303,5,317,14,311,14,302,10,280,8,261,10,250,15,247,20,253,30"/>
+<area shape="poly" id="edge5_Node000003_Node000003" title=" " alt="" coords="248,102,242,95,246,86,259,79,280,77,303,80,317,89,311,88,302,85,280,83,261,85,250,89,247,95,253,105"/>
+</map>

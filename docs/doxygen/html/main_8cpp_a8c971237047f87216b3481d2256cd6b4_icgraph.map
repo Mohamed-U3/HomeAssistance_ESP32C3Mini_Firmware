@@ -1,0 +1,7 @@
+<map id="setupArduinoOta" name="setupArduinoOta">
+<area shape="rect" id="Node000001" title="Configure and start network OTA updates via ArduinoOTA." alt="" coords="107,29,225,56"/>
+<area shape="poly" id="edge3_Node000001_Node000001" title=" " alt="" coords="187,14,180,10,166,8,152,10,145,14,143,20,147,30,142,28,138,21,141,11,150,5,166,3,182,5,192,15"/>
+<area shape="rect" id="Node000002" href="$main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d" title="Initialize NVS configuration, relays, Wi&#45;Fi failover, mDNS, OTA, Web UI, and MQTT." alt="" coords="5,29,59,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="89,43,59,45,59,40,94,42"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="53,15,46,10,32,8,19,10,11,14,10,20,13,28,8,29,4,21,7,11,17,5,32,3,49,5,58,14"/>
+</map>

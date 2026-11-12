@@ -1,0 +1,5 @@
+<map id="src/web_ui.h" name="src/web_ui.h">
+<area shape="rect" id="Node000001" title="Embedded HTTP dashboard, WebSocket live synchronization, and browser OTA updates." alt="" coords="5,5,101,32"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="15,80,91,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="55,30,56,65,50,64,51,35"/>
+</map>

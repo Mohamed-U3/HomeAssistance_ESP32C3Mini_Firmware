@@ -1,0 +1,16 @@
+<map id="toggleSingleRelayByPin" name="toggleSingleRelayByPin">
+<area shape="rect" id="Node000001" title="Toggle a single relay identified by its ESP32&#45;C3 GPIO pin number." alt="" coords="5,104,167,131"/>
+<area shape="poly" id="edge9_Node000001_Node000001" title=" " alt="" coords="57,104,52,95,56,86,67,80,86,77,106,80,118,88,113,89,104,85,86,83,69,85,60,89,58,95,62,103"/>
+<area shape="rect" id="Node000002" href="$group__relays.html#gaf7cbe2f5eeb3494b310d0ea10fcd055d" title="Set a single relay&#39;s state and synchronize GPIO, NVS, MQTT, and WebSocket clients." alt="" coords="215,104,288,131"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="167,115,202,117,197,118,168,120"/>
+<area shape="poly" id="edge8_Node000002_Node000002" title=" " alt="" coords="226,103,222,95,225,86,235,80,251,77,269,80,279,89,274,89,267,85,251,83,237,85,229,89,227,95,231,104"/>
+<area shape="rect" id="Node000003" href="$relays_8cpp.html#a9cfb1378655154eed8cc8a6ce38d3047" title=" " alt="" coords="341,29,446,56"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="273,101,335,66,344,64,349,62,337,70,276,106"/>
+<area shape="rect" id="Node000004" href="$relays_8cpp.html#a1e50f221535f81bfe7b471ecbc94b285" title=" " alt="" coords="336,104,451,131"/>
+<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="288,115,323,117,318,118,289,120"/>
+<area shape="rect" id="Node000005" href="$group__config.html#ga5dcd56d2e824768c1a2809ba0090f7bf" title="Persist the 8&#45;bit relay state bitmask to NVS only when it has changed." alt="" coords="336,179,451,205"/>
+<area shape="poly" id="edge6_Node000002_Node000005" title=" " alt="" coords="279,128,356,171,350,171,278,134"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="369,28,364,21,367,11,377,5,394,3,411,5,421,14,416,14,409,10,394,8,379,10,372,14,370,20,374,30"/>
+<area shape="poly" id="edge5_Node000004_Node000004" title=" " alt="" coords="369,102,364,95,367,86,377,80,394,77,411,80,421,89,416,88,409,85,394,83,379,85,372,89,370,95,374,105"/>
+<area shape="poly" id="edge7_Node000005_Node000005" title=" " alt="" coords="369,177,364,170,367,160,377,154,394,152,411,155,421,164,416,163,409,160,394,157,379,159,372,164,370,170,373,180"/>
+</map>

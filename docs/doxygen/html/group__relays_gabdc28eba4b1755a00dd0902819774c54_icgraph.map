@@ -1,0 +1,28 @@
+<map id="smartToggleAllRelays" name="smartToggleAllRelays">
+<area shape="rect" id="Node000001" title="Smart master toggle: turn all OFF if any relay is ON, otherwise turn all ON." alt="" coords="585,153,733,180"/>
+<area shape="poly" id="edge13_Node000001_Node000001" title=" " alt="" coords="688,138,679,134,659,132,640,134,630,139,627,144,632,154,627,152,622,145,626,135,638,129,659,127,681,129,694,139"/>
+<area shape="rect" id="Node000002" href="$group__relays.html#ga1583a5cd071b0df65d66ca83d0cd065c" title="Poll physical buttons with software debouncing." alt="" coords="424,104,529,131"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="590,149,528,134,529,129,595,149"/>
+<area shape="rect" id="Node000007" href="$web__ui_8cpp.html#a1e0488d07821284a93f644a94feb35b3" title=" " alt="" coords="416,191,537,217"/>
+<area shape="poly" id="edge14_Node000001_Node000007" title=" " alt="" coords="579,183,537,194,537,189,573,184"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="501,88,493,85,476,83,461,85,452,89,450,95,454,105,450,103,445,95,448,86,459,80,477,77,495,80,506,89"/>
+<area shape="rect" id="Node000003" href="$main_8cpp.html#afe461d27b9c48d5921c00d521181f12f" title="Service Web UI, OTA, MQTT, physical buttons, and the 2&#45;minute Wi&#45;Fi loss watchdog." alt="" coords="9,29,55,56"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="434,97,368,71,279,51,189,42,111,41,56,43,54,39,111,36,190,37,280,46,369,65,439,96"/>
+<area shape="rect" id="Node000004" href="$main_8cpp.html#a01939620b305005d0e0e011f1b9fcd63" title="Tick handler passed into Wi&#45;Fi search and portal loops to keep physical buttons active." alt="" coords="276,104,368,131"/>
+<area shape="poly" id="edge5_Node000002_Node000004" title=" " alt="" coords="406,118,369,120,368,115,411,117"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="53,15,47,10,32,8,18,10,11,14,9,20,13,28,8,29,4,21,7,11,16,5,32,3,49,5,58,13"/>
+<area shape="poly" id="edge12_Node000004_Node000004" title=" " alt="" coords="347,89,339,85,322,83,306,85,298,89,296,95,300,104,295,103,291,95,294,86,305,80,322,77,341,80,352,89"/>
+<area shape="rect" id="Node000005" href="$main_8cpp.html#a38ae8e1dfae8064f08254147ed5f84b3" title="Gracefully stop network services, open the SoftAP Config Portal, and restart." alt="" coords="107,79,228,105"/>
+<area shape="poly" id="edge6_Node000004_Node000005" title=" " alt="" coords="258,108,228,105,228,99,263,107"/>
+<area shape="rect" id="Node000006" href="$main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d" title="Initialize NVS configuration, relays, Wi&#45;Fi failover, mDNS, OTA, Web UI, and MQTT." alt="" coords="5,129,59,156"/>
+<area shape="poly" id="edge11_Node000004_Node000006" title=" " alt="" coords="260,125,60,143,59,138,261,120"/>
+<area shape="poly" id="edge7_Node000005_Node000003" title=" " alt="" coords="113,75,55,53,55,48,117,71"/>
+<area shape="poly" id="edge8_Node000005_Node000005" title=" " alt="" coords="189,64,182,60,167,57,154,59,146,64,145,70,148,79,143,78,139,70,142,61,152,54,167,52,184,55,194,63"/>
+<area shape="poly" id="edge9_Node000005_Node000006" title=" " alt="" coords="114,114,61,135,58,130,117,109"/>
+<area shape="poly" id="edge10_Node000006_Node000006" title=" " alt="" coords="53,115,47,110,32,108,18,110,11,114,9,120,13,128,8,129,4,121,7,111,16,105,32,103,49,105,58,113"/>
+<area shape="poly" id="edge18_Node000007_Node000007" title=" " alt="" coords="501,175,493,172,476,169,461,171,452,176,450,181,454,191,450,189,445,182,448,172,459,166,477,164,495,167,506,176"/>
+<area shape="rect" id="Node000008" href="$group__webui.html#ga818909dc80498d9c5bb8bda01687a960" title="Start the HTTP server (port 80) and WebSocket server (port 81)." alt="" coords="129,204,206,231"/>
+<area shape="poly" id="edge15_Node000007_Node000008" title=" " alt="" coords="398,208,206,218,206,213,403,206"/>
+<area shape="poly" id="edge17_Node000008_Node000006" title=" " alt="" coords="126,198,57,159,59,154,131,195"/>
+<area shape="poly" id="edge16_Node000008_Node000008" title=" " alt="" coords="189,188,182,185,167,183,154,185,146,189,145,195,148,205,143,202,139,195,142,186,152,180,167,177,184,180,194,189"/>
+</map>

@@ -1,0 +1,21 @@
+<map id="sendHADiscovery" name="sendHADiscovery">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,117,133,144"/>
+<area shape="poly" id="edge13_Node000001_Node000001" title=" " alt="" coords="38,117,33,109,37,99,49,93,69,91,90,93,103,101,98,103,89,98,69,96,51,98,41,103,38,108,43,116"/>
+<area shape="rect" id="Node000002" href="$mqtt__ha_8cpp.html#a69d23664e107e2f2fc3059e7e3991a76" title=" " alt="" coords="181,29,314,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="96,115,179,72,206,62,202,65,182,77,99,119"/>
+<area shape="rect" id="Node000003" href="$mqtt__ha_8cpp.html#a2fee329deba821d0e2160ec4fc36cebe" title=" " alt="" coords="362,80,466,107"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="133,121,348,98,346,103,134,126"/>
+<area shape="rect" id="Node000004" href="$mqtt__ha_8cpp.html#a375d83b3284dbf9d108936eaed2e6c63" title=" " alt="" coords="374,229,455,256"/>
+<area shape="poly" id="edge5_Node000001_Node000004" title=" " alt="" coords="90,142,132,167,182,191,274,218,361,236,356,236,273,223,180,196,130,172,90,147"/>
+<area shape="rect" id="Node000005" href="$group__mqtt.html#gaa56714abe225216dfa54cf21e3e7c0cd" title="Publish a single relay&#39;s retained state (&quot;ON&quot; / &quot;OFF&quot;) to MQTT." alt="" coords="188,155,307,181"/>
+<area shape="poly" id="edge7_Node000001_Node000005" title=" " alt="" coords="133,141,175,151,170,153,134,147"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="218,29,213,21,217,11,229,5,247,3,267,5,279,14,274,14,266,10,247,8,230,10,221,15,219,20,223,29"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="385,79,380,71,384,62,395,56,414,53,434,56,446,65,441,65,433,61,414,59,397,61,388,65,386,71,390,80"/>
+<area shape="poly" id="edge6_Node000004_Node000004" title=" " alt="" coords="385,228,380,221,384,211,395,205,414,203,434,205,446,215,441,214,433,210,414,208,397,210,388,215,386,220,390,230"/>
+<area shape="poly" id="edge10_Node000005_Node000003" title=" " alt="" coords="278,152,366,114,371,112,280,157"/>
+<area shape="poly" id="edge11_Node000005_Node000004" title=" " alt="" coords="280,179,372,223,366,223,279,184"/>
+<area shape="poly" id="edge12_Node000005_Node000005" title=" " alt="" coords="218,154,213,146,217,136,229,130,247,128,267,131,279,140,274,139,266,136,247,133,230,135,221,140,219,145,223,155"/>
+<area shape="rect" id="Node000006" href="$group__relays.html#ga4d04b9f174aa87942b3813b1a02dab92" title="Read the cached state of a relay channel." alt="" coords="362,155,466,181"/>
+<area shape="poly" id="edge8_Node000005_Node000006" title=" " alt="" coords="307,165,349,168,344,168,308,171"/>
+<area shape="poly" id="edge9_Node000006_Node000006" title=" " alt="" coords="385,153,380,146,384,136,395,130,414,128,434,131,446,140,441,139,433,136,414,133,397,135,388,140,386,145,390,155"/>
+</map>
