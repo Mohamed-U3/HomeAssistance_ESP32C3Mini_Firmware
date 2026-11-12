@@ -8,7 +8,7 @@
 // ==========================================
 // 1. MODULE NAME CONFIGURATION
 // ==========================================
-#define Module_Name module3
+#define Module_Name module1
 
 // Preprocessor Stringification Macros
 #define STR_HELPER(x) #x
@@ -56,6 +56,12 @@ unsigned long lastConfigDebounce = 0;
 const unsigned long debounceDelay = 50;
 
 unsigned long lastMqttReconnectAttempt = 0;
+
+// Helper to get the LWT Availability Topic
+String getAvailabilityTopic()
+{
+  return String("homeassistant/switch/") + hostname + "/status";
+}
 
 // JSON payload of relay states for WebSocket
 String getStatesJson()
@@ -126,9 +132,11 @@ void turnOffAllRelays()
   }
 }
 
-// Publish Home Assistant Auto-Discovery Configuration
+// Publish Home Assistant Auto-Discovery Configuration (with LWT Availability)
 void sendHADiscovery()
 {
+  String availTopic = getAvailabilityTopic();
+
   for (size_t i = 0; i < relayCount; i++)
   {
     String discoveryTopic = String("homeassistant/switch/") + hostname + "/relay" + String(i) + "/config";
@@ -144,8 +152,12 @@ void sendHADiscovery()
                      cmdTopic + "\","
                      "\"stat_t\":\"" +
                      stateTopic + "\","
+                     "\"avty_t\":\"" +
+                     availTopic + "\","
                      "\"pl_on\":\"ON\","
                      "\"pl_off\":\"OFF\","
+                     "\"pl_avail\":\"online\","
+                     "\"pl_not_avail\":\"offline\","
                      "\"dev\":{"
                      "\"ids\":[\"" +
                      String(hostname) + "\"],"
@@ -217,7 +229,7 @@ void mqttProbeTask(void *pvParameters)
   }
 }
 
-// Fast, non-blocking MQTT connection (only runs after mqttProbeTask confirms broker is live)
+// Fast, non-blocking MQTT connection with Last Will and Testament (LWT)
 void reconnectMQTT()
 {
   if (!mqttBrokerReachable || mqttClient.connected())
@@ -239,25 +251,46 @@ void reconnectMQTT()
                   mqtt_server, mqttResolvedIP.toString().c_str(), mqtt_user);
 
     String clientId = String(hostname) + "-" + String(random(0xffff), HEX);
+    String availTopic = getAvailabilityTopic();
     bool connected = false;
 
+    // Connect and register LWT: Topic = availTopic, QoS = 1, Retain = true, Will Payload = "offline"
     if (strlen(mqtt_user) > 0)
     {
-      connected = mqttClient.connect(clientId.c_str(), mqtt_user, mqtt_pass);
+      connected = mqttClient.connect(
+          clientId.c_str(),
+          mqtt_user,
+          mqtt_pass,
+          availTopic.c_str(),
+          1,
+          true,
+          "offline");
     }
     else
     {
-      connected = mqttClient.connect(clientId.c_str());
+      connected = mqttClient.connect(
+          clientId.c_str(),
+          availTopic.c_str(),
+          1,
+          true,
+          "offline");
     }
 
     if (connected)
     {
       Serial.println(" Connected!");
+
+      // 1. Publish Birth Message ("online", retained) so Home Assistant enables the switches
+      mqttClient.publish(availTopic.c_str(), "online", true);
+
+      // 2. Subscribe to commands for all relays
       for (size_t i = 0; i < relayCount; i++)
       {
         String cmdTopic = String("homeassistant/switch/") + hostname + "/relay" + String(i) + "/set";
         mqttClient.subscribe(cmdTopic.c_str());
       }
+
+      // 3. Send Auto-Discovery & current relay states
       sendHADiscovery();
     }
     else
@@ -272,6 +305,15 @@ void reconnectMQTT()
 void openConfigPortal()
 {
   Serial.println("\n[Portal] Stopping background services...");
+
+  // Gracefully mark device offline in Home Assistant before shutting down Wi-Fi
+  if (mqttClient.connected())
+  {
+    String availTopic = getAvailabilityTopic();
+    mqttClient.publish(availTopic.c_str(), "offline", true);
+    mqttClient.disconnect();
+  }
+
   server.stop();
   webSocket.close();
   delay(100);
@@ -502,10 +544,11 @@ void setup()
     MDNS.addService("ws", "tcp", 81);
   }
 
-  // Configure MQTT Client with 512-byte buffer for HA Discovery JSON
+  // Configure MQTT Client with 512-byte buffer for HA Discovery JSON & 15s LWT Keep-Alive
   espClient.setTimeout(1); // 1-second socket timeout safety cap
   mqttClient.setCallback(mqttCallback);
   mqttClient.setBufferSize(512);
+  mqttClient.setKeepAlive(15); // Broker triggers LWT "offline" ~15-22s after sudden power loss
 
   Serial.println("\n--- WiFi Connected ---");
   Serial.print("AP Name:    ");
